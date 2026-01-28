@@ -204,6 +204,13 @@
       color: rgba(243,245,255,.78);
     }
 
+    .pill--strong{
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: rgba(243,245,255,.90);
+}
+
+
     /* SECTION */
     .section{ margin-top: 58px; }
     .sectionHead{
@@ -545,12 +552,14 @@
           <a class="btn ghost" href="#intake">Start product intake</a>
         </div>
 
-        <div class="proof" aria-label="Proof points">
-          <span class="pill">Existing manufacturer relationships</span>
-          <span class="pill">Sampling → production → QC</span>
-          <span class="pill">Execution, not introductions</span>
-          <span class="pill">Fit-based sourcing</span>
-        </div>
+<div class="proof">
+  <span class="pill pill--strong">Factories we already work with</span>
+  <span class="pill pill--strong">Sampling → production → QC, managed</span>
+  <span class="pill pill--strong">We run the process (not intros)</span>
+  <span class="pill pill--strong">Matched to your SKU, not a directory</span>
+</div>
+
+
       </section>
 
       <section class="section" id="what">
@@ -880,7 +889,7 @@
               <button class="btn primary" type="submit">Submit intake</button>
             </div>
 
-            <p class="micro">After you submit, you’ll be redirected to book a 30-minute call.</p>
+            <p class="micro">After you submit, you’ll be redirected to book a 15-minute call.</p>
           </form>
         </div>
       </section>
@@ -910,6 +919,17 @@
           <h2>Services & pricing</h2>
           <div class="note">Starting at pricing. Final scope depends on SKUs, iterations, and timeline.</div>
         </div>
+
+         <!-- Financing highlight -->
+        <div class="panel" style="margin-bottom:28px; border-left:4px solid #c33;">
+  <p style="margin-bottom:6px;">
+    <strong>Production financing (case-by-case)</strong>
+  </p>
+  <p class="micro">
+    For qualified projects, financing may be available to support sampling, production, or initial inventory.
+    Financing is not guaranteed and is subject to eligibility, underwriting, and third-party approval.
+  </p>
+</div>
 
         <div class="priceGrid">
           <div class="price">
@@ -1014,7 +1034,14 @@
           <p>By default, no. Our fees are for execution. Production, freight, and other pass-throughs are quoted separately.</p>
         </details>
 
-        <!-- Two new FAQs -->
+        <details>
+          <summary>Do you offer financing?</summary>
+          <p>In some cases. For qualified projects, financing may be available on a case-by-case basis to support
+    sampling, production, or initial inventory.</p>
+          <p>Financing is not guaranteed and is subject to eligibility, underwriting, and third-party approval.
+    We’ll review fit and options during the intro call.</p>    
+        </details>
+        
         <details>
           <summary>How fast can we get to production?</summary>
           <p>It depends on category, materials, MOQ, and sample iterations. If you already have specs and a clear target, we can move faster—otherwise we’ll build the plan and timeline during discovery.</p>
@@ -1110,6 +1137,7 @@
 
 </body>
 </html>
+
 
 
 
