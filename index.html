@@ -957,9 +957,17 @@
     <p>Quick call to confirm fit and next steps. If we’re not the right partner, we’ll tell you fast.</p>
 
     <div class="ctaRow" style="margin-top:14px; display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
-      <a class="btn primary" href="https://calendly.com/products-a26cos/30min" target="_blank" rel="noopener">
-        Discuss your product (book a call)
-      </a>
+      <a class="btn primary"
+   href="https://calendly.com/products-a26cos/30min"
+   target="_blank"
+   rel="noopener"
+   onclick="gtag('event', 'calendly_click', {
+     event_category: 'conversion',
+     event_label: 'Discuss your product'
+   });">
+  Discuss your product (book a call)
+</a>
+
       <a class="micro" href="mailto:products@a26cos.com?subject=a26%20Products%20—%20Discuss%20my%20product">
         or email products@a26cos.com
       </a>
@@ -1200,6 +1208,7 @@
 
 </body>
 </html>
+
 
 
 
