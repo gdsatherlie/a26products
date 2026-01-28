@@ -1194,8 +1194,15 @@
           headers: { "Accept": "application/json" }
         });
 
-        if (res.ok) {
-          window.location.href = "https://calendly.com/products-a26cos/30min";
+if (res.ok) {
+  gtag('event', 'intake_submit', {
+    event_category: 'conversion',
+    event_label: 'Product intake form'
+  });
+
+  window.location.href = "https://calendly.com/products-a26cos/30min";
+}
+
         } else {
           alert("Submission failed. Please try again or email products@a26cos.com.");
         }
@@ -1208,6 +1215,7 @@
 
 </body>
 </html>
+
 
 
 
