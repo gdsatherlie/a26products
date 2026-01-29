@@ -1196,22 +1196,31 @@
           headers: { "Accept": "application/json" }
         });
 
-if (res.ok) {
-  gtag('event', 'intake_submit', {
-    event_category: 'lead',
-    event_label: 'product_intake'
-  });
+        if (res.ok) {
+          // Optional GA event (safe even if GA isn't loaded)
+          if (typeof window.gtag === "function") {
+            window.gtag("event", "intake_submit", {
+              event_category: "lead",
+              event_label: "product_intake"
+            });
+          }
 
-  window.location.href = "https://calendly.com/products-a26cos/30min";
-} else {
-  alert("Submission failed. Please try again or email products@a26cos.com.");
-}
+          window.location.href = "https://calendly.com/products-a26cos/30min";
+          return;
+        }
 
+        alert("Submission failed. Please try again or email products@a26cos.com.");
+      } catch (err) {
+        alert("Network error. Please email products@a26cos.com.");
+      }
+    });
   });
 </script>
 
+
 </body>
 </html>
+
 
 
 
