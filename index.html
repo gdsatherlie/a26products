@@ -528,7 +528,8 @@
   function gtag(){dataLayer.push(arguments);}
   window.gtag = gtag; // <-- add this line to force gtag onto window
   gtag('js', new Date());
-  gtag('config', 'G-WWVP0EBRBC');
+  gtag('config', 'G-WWVP0EBRBC', { debug_mode: true });
+
 </script>
 
   
@@ -1197,8 +1198,8 @@
 
 if (res.ok) {
   gtag('event', 'intake_submit', {
-    event_category: 'conversion',
-    event_label: 'Product intake form'
+    event_category: 'lead',
+    event_label: 'product_intake'
   });
 
   window.location.href = "https://calendly.com/products-a26cos/30min";
@@ -1216,6 +1217,7 @@ if (res.ok) {
 
 </body>
 </html>
+
 
 
 
