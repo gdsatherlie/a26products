@@ -158,4 +158,113 @@
         <div class="smallList">
           <b>Clarity upfront</b> so quotes and timelines aren’t fantasy.<br/>
           <b>Fit-based vendor selection</b> (capability + reliability).<br/>
-          <b>Milestone execution</b> with ear
+          <b>Milestone execution</b> with early issue resolution.<br/>
+          <b>QC checkpoints</b> before shipment release.<br/>
+          <b>Reorder playbooks</b> so future runs get easier.
+        </div>
+      </div>
+
+      <div class="ctaRow" style="margin-top:16px;">
+        <a class="btn primary" data-calendly href="#"
+           onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Hero/Why CTA'});}">
+          Book a 15-min call <span class="arrow">↗</span>
+        </a>
+        <a class="btn ghost" href="#intake">Or submit intake</a>
+      </div>
+    </section>
+
+    <!-- INTAKE (keep your exact plumbing) -->
+    <section id="intake" class="reveal">
+      <div class="sectionHead">
+        <h2>Start product intake</h2>
+        <div class="note">2–3 minutes. Then you’ll book a call.</div>
+      </div>
+
+      <div class="panel">
+        <p style="color:var(--muted);">Share the basics so we can route you to the right process and manufacturers.</p>
+
+        <form id="intakeForm" action="https://formspree.io/f/mlgnrkqa" method="POST">
+          <input type="hidden" name="_next" value="https://calendly.com/a26companies/15min">
+          <input type="hidden" name="_redirect" value="https://calendly.com/a26companies/15min">
+          <input type="hidden" name="_subject" value="New a26 Products intake">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <div class="formRow">
+            <div>
+              <label>Name</label>
+              <input name="name" placeholder="Jane Founder" required />
+            </div>
+            <div>
+              <label>Email</label>
+              <input name="email" type="email" placeholder="jane@brand.com" required />
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div>
+              <label>Product category</label>
+              <input name="category" placeholder="Apparel, home goods, accessories…" />
+            </div>
+            <div>
+              <label>Stage</label>
+              <select name="stage">
+                <option>Idea / early concept</option>
+                <option>Sampling</option>
+                <option>Ready for production</option>
+                <option>Scaling / new supplier</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div>
+              <label>Target monthly volume</label>
+              <input name="volume" placeholder="e.g., 2,000 units/month" />
+            </div>
+            <div>
+              <label>Timeline</label>
+              <input name="timeline" placeholder="e.g., ship in 60–90 days" />
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div>
+              <label>Target unit cost (optional)</label>
+              <input name="unit_cost" placeholder="e.g., $6 landed / $3 ex-works" />
+            </div>
+            <div>
+              <label>Primary constraint (optional)</label>
+              <select name="constraint">
+                <option>Quality / consistency</option>
+                <option>Cost target</option>
+                <option>Speed / lead time</option>
+                <option>Low MOQ</option>
+                <option>Compliance / testing</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label>Anything we should know?</label>
+            <textarea name="details" placeholder="Briefly describe the product, materials, packaging, any current supplier, and what’s stuck."></textarea>
+          </div>
+
+          <div class="ctaRow" style="margin-top:12px;">
+            <button class="btn primary" type="submit">Submit intake</button>
+            <a class="btn ghost" data-calendly href="#">Or book a call</a>
+          </div>
+
+          <p class="micro">After you submit, you’ll be redirected to book a 15-minute call.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="reveal">
+      © <span id="y"></span> a26 Products • <a href="mailto:products@a26cos.com" style="text-decoration:underline;">products@a26cos.com</a>
+    </footer>
+
+  </main>
+
+  <script src="./site.js"></script>
+</body>
+</html>
