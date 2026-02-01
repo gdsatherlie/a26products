@@ -128,4 +128,111 @@
             <input type="hidden" name="_next" value="https://calendly.com/a26companies/15min">
             <input type="hidden" name="_redirect" value="https://calendly.com/a26companies/15min">
             <input type="hidden" name="_subject" value="New a26 Products intake">
-            <input type="text" name="_gotc_
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="formRow">
+              <div>
+                <label>Name</label>
+                <input name="name" placeholder="Jane Founder" required />
+              </div>
+              <div>
+                <label>Email</label>
+                <input name="email" type="email" placeholder="jane@brand.com" required />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div>
+                <label>Product category</label>
+                <input name="category" placeholder="Apparel, home goods, accessories…" />
+              </div>
+              <div>
+                <label>Stage</label>
+                <select name="stage">
+                  <option>Idea / early concept</option>
+                  <option>Sampling</option>
+                  <option>Ready for production</option>
+                  <option>Scaling / new supplier</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div>
+                <label>Target monthly volume</label>
+                <input name="volume" placeholder="e.g., 2,000 units/month" />
+              </div>
+              <div>
+                <label>Timeline</label>
+                <input name="timeline" placeholder="e.g., ship in 60–90 days" />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div>
+                <label>Target unit cost (optional)</label>
+                <input name="unit_cost" placeholder="e.g., $6 landed / $3 ex-works" />
+              </div>
+              <div>
+                <label>Primary constraint (optional)</label>
+                <select name="constraint">
+                  <option>Quality / consistency</option>
+                  <option>Cost target</option>
+                  <option>Speed / lead time</option>
+                  <option>Low MOQ</option>
+                  <option>Compliance / testing</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label>Anything we should know?</label>
+              <textarea name="details" placeholder="Briefly describe the product, materials, packaging, any current supplier, and what’s stuck."></textarea>
+            </div>
+
+            <div class="ctaRow" style="margin-top:12px;">
+              <button class="btn primary" type="submit">Submit intake</button>
+              <a class="btn ghost" data-calendly href="#">Or book a call</a>
+            </div>
+
+            <p class="micro">After you submit, you’ll be redirected to book a 15-minute call.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- DISCUSS (keep conversion) -->
+      <section class="section" id="call">
+        <div class="sectionHead">
+          <h2>Discuss your product</h2>
+          <div class="note">Quick call to confirm fit and next steps.</div>
+        </div>
+
+        <div class="panel">
+          <p>We’ll confirm fit, timeline, constraints, and tell you quickly if we’re not the right partner.</p>
+
+          <div class="ctaRow" style="margin-top:14px;">
+            <a class="btn primary" data-calendly href="#"
+              onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Discuss your product'});}">
+              Discuss your product (book a call)
+            </a>
+            <a class="btn ghost" href="mailto:products@a26cos.com?subject=a26%20Products%20—%20Discuss%20my%20product">
+              Email products@a26cos.com
+            </a>
+          </div>
+
+          <p class="micro" style="margin-top:12px;">
+            Prefer more detail first? Read <a href="./about.html" style="text-decoration:underline;">About</a> or <a href="./how-it-works.html" style="text-decoration:underline;">How it works</a>.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="y"></span> a26 Products • <a href="mailto:products@a26cos.com" style="text-decoration:underline;">products@a26cos.com</a>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
