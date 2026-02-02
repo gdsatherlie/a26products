@@ -751,7 +751,7 @@ header .topbar { position: relative; }
   /* Dropdown panel (hidden until JS adds .is-open) */
   header + .mobile-menu.is-open {
     display: block !important;
-    position: absolute;
+    position: fixed;
     right: 16px;
     top: 64px;
     background: #fff;
