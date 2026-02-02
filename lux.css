@@ -1010,4 +1010,26 @@ header .topbar { position: relative; }
   }
 }
 
+/* Mobile: remove top sag/extra space */
+@media (max-width: 768px){
+  body{ margin:0 !important; padding:0 !important; }
+  header{ margin:0 !important; padding-top:0 !important; }
+  header .container{ padding-top:0 !important; }
+}
+
+/* Mobile: keep header visible while scrolling */
+@media (max-width: 768px){
+  header{
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* prevent sections from sliding under the sticky header */
+  #intake{ scroll-margin-top: 90px; }
+}
+
 
