@@ -868,3 +868,62 @@ header .topbar { position: relative; }
     text-decoration:none;
   }
 }
+
+/* ===== Mobile menu polish (lux) ===== */
+
+/* hamburger */
+.mobile-menu-toggle{
+  color: #111;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.mobile-menu-toggle:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 38px rgba(0,0,0,0.10);
+}
+.mobile-menu-toggle:active{
+  transform: translateY(0);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* dropdown panel */
+.mobile-menu{
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* nicer menu items */
+.mobile-menu a{
+  border-radius: 10px;
+  transition: background .12s ease, transform .12s ease;
+}
+.mobile-menu a:hover{
+  background: rgba(0,0,0,0.04);
+  transform: translateY(-1px);
+}
+
+/* subtle separator between top links + CTAs (optional) */
+.mobile-menu a:nth-child(3){
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* make the last two feel like buttons */
+.mobile-menu a:nth-child(3),
+.mobile-menu a:nth-child(4){
+  font-weight: 600;
+}
+.mobile-menu a:nth-child(4){
+  background: #111;
+  color: #fff;
+}
+.mobile-menu a:nth-child(4):hover{
+  background: #000;
+}
