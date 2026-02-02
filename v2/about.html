@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>a26 Products — About</title>
-  <meta name="description" content="About a26 Products — operator-led sourcing, sampling, production management, and QC." />
+  <meta name="description" content="About a26 Products — a calmer, operator-led way to source and manufacture." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +25,23 @@
 </head>
 
 <body>
-  <!-- Overlay starts ON, lux.js fades it off on load -->
   <div class="pageFade on"></div>
 
   <div class="bgWash"></div>
   <div class="grain"></div>
+
+  <!-- Always-on-screen CTA bar -->
+  <div class="stickyCtas" aria-label="Quick actions">
+    <div class="inner">
+      <div class="bar">
+        <a class="btn ghost" data-nav href="./preview.html#intake">Start intake</a>
+        <a class="btn primary" data-calendly href="#"
+           onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'About Sticky CTA'});}">
+          Book a call <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <header>
     <div class="container">
@@ -53,11 +65,10 @@
     <!-- HERO -->
     <section class="reveal">
       <div class="kicker">About</div>
-      <h1 class="h1">A calmer way to manufacture.</h1>
+      <h1 class="h1">We built a26 because “sourcing” became a dirty word.</h1>
       <p class="lede">
-        a26 Products is an operator-led team built to reduce the chaos of sourcing and production.
-        We match you with the right factory and run execution end-to-end — sampling, production management, and QC —
-        so you can ship reliably without building an internal sourcing team.
+        Too many teams experience manufacturing as a black box: vague answers, shifting timelines, surprise costs, and quality issues that show up late.
+        We wanted the opposite — a calm process, run by operators, where decisions are clear and outcomes are measurable.
       </p>
 
       <div class="ctaRow">
@@ -65,31 +76,32 @@
            onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'About Hero CTA'});}">
           Book a 15-min call <span class="arrow">↗</span>
         </a>
-        <a class="btn ghost" data-nav href="./preview.html#intake">Or submit intake</a>
+        <a class="btn ghost" data-nav href="./services.html">View services</a>
       </div>
 
       <div class="heroGrid" style="margin-top:44px;">
         <div class="heroCard reveal" data-parallax="0.04">
-          <div class="kicker">What we believe</div>
-          <div style="margin-top:10px; font-family:'Space Grotesk',Inter,system-ui; font-size:22px; letter-spacing:-.02em; line-height:1.15;">
-            Predictability beats “cheap.”
+          <div class="kicker">The origin</div>
+          <div style="margin-top:10px; font-family:'Space Grotesk',Inter,system-ui; font-size:22px; letter-spacing:-.02em; line-height:1.12;">
+            Manufacturing is won (or lost) in the details.
           </div>
           <p style="margin-top:12px; color:rgba(14,15,18,.70); font-size:14.5px; line-height:1.65;">
-            Most manufacturing pain comes from unclear specs, vendor mismatch, missed milestones, and avoidable quality issues.
-            We’re built to prevent those failures with a simple process and tight execution.
+            Specs that aren’t locked. Factories that aren’t a fit. Timelines that aren’t enforced.
+            QC that’s treated like an afterthought. That’s where launches slip and margins evaporate.
+            We built a26 to run those details with discipline.
           </p>
         </div>
 
         <div class="heroCard reveal" data-parallax="0.06">
-          <div class="kicker">How we work</div>
+          <div class="kicker">The promise</div>
           <div style="margin-top:10px; font-family:'Space Grotesk',Inter,system-ui; font-size:18px; letter-spacing:-.01em; line-height:1.25;">
-            Fit-based sourcing + milestone discipline + QC checkpoints.
+            Predictability over hype.
           </div>
           <div class="badgeRow" style="margin-top:14px;">
             <span class="badge"><span class="dot"></span> Requirements first</span>
-            <span class="badge"><span class="dot"></span> Shortlist with rationale</span>
-            <span class="badge"><span class="dot"></span> Sampling loop</span>
-            <span class="badge"><span class="dot"></span> QC before release</span>
+            <span class="badge"><span class="dot"></span> Fit-based sourcing</span>
+            <span class="badge"><span class="dot"></span> Milestone execution</span>
+            <span class="badge"><span class="dot"></span> QC checkpoints</span>
           </div>
         </div>
       </div>
@@ -97,57 +109,78 @@
 
     <hr class="sep" />
 
-    <!-- WHY WE EXIST -->
+    <!-- STORY (EDITORIAL) -->
     <section class="reveal">
       <div class="sectionHead">
-        <h2>Why we exist</h2>
-        <div class="note">Because manufacturing shouldn’t feel like a gamble.</div>
+        <h2>The story</h2>
+        <div class="note">Less noise. More control.</div>
+      </div>
+
+      <div class="panel reveal">
+        <p style="margin:0; color:rgba(14,15,18,.72); font-size:15px; line-height:1.8;">
+          a26 Products started with a simple observation: founders and operators don’t actually want “a factory.”
+          They want a product that arrives on time, on spec, and at a cost structure that holds up when they reorder.
+          <br><br>
+          But manufacturing is rarely sold that way. It’s sold as access.
+          Access to a country. Access to a supplier list. Access to a contact.
+          And then the hard part begins: aligning specs, managing sampling, negotiating tradeoffs, enforcing timelines,
+          and building quality control that catches issues before they ship.
+          <br><br>
+          That hard part is the business. So that’s what we do.
+        </p>
+      </div>
+    </section>
+
+    <!-- WHAT WE BELIEVE -->
+    <section class="reveal">
+      <div class="sectionHead">
+        <h2>What we believe</h2>
+        <div class="note">How we make manufacturing calmer.</div>
       </div>
 
       <div class="panel statement reveal">
         <div class="bigType">
           You’re buying <span class="gold">predictability</span>.<br />
-          Not supplier roulette.
+          Not a factory.
         </div>
         <div class="smallList">
-          <b>Clarity upfront</b> so quotes and timelines aren’t fantasy.<br/>
-          <b>Fit-based vendor selection</b> (capability + reliability).<br/>
-          <b>Milestone execution</b> with early issue resolution.<br/>
-          <b>QC checkpoints</b> before shipment release.<br/>
-          <b>Reorder playbooks</b> so future runs get easier.
+          <b>Clarity upfront</b> → a real requirements brief, not a vague idea.<br/>
+          <b>Fit-based vendor selection</b> → capability + reliability, not “who’s cheapest.”<br/>
+          <b>Milestone discipline</b> → timelines are managed, not hoped for.<br/>
+          <b>QC designed to the risk</b> → checkpoints before release, not apologies after delivery.<br/>
+          <b>Reorder playbooks</b> → the second run should be easier than the first.
         </div>
       </div>
     </section>
 
-    <!-- WHAT MAKES A26 DIFFERENT -->
+    <!-- HOW WE SHOW UP -->
     <section class="reveal">
       <div class="sectionHead">
-        <h2>What makes us different</h2>
-        <div class="note">We run the work. We don’t just introduce vendors.</div>
+        <h2>How we show up</h2>
+        <div class="note">Operator-led execution, start to finish.</div>
       </div>
 
       <div class="grid3 stagger reveal">
         <div class="card">
-          <h3>Operator-led</h3>
+          <h3>Direct ownership</h3>
           <p>
-            You get an accountable owner for the process — not a directory of factories.
-            We manage communication, timelines, and decisions.
+            You get a responsible owner for the process. We manage communication, decisions, and follow-through — not “introductions.”
           </p>
           <div class="meta">Outcome: fewer surprises</div>
         </div>
 
         <div class="card">
-          <h3>Relationships + expansion</h3>
+          <h3>Tradeoffs, early</h3>
           <p>
-            We prioritize manufacturers we already know and trust, and expand the network only when your product needs a niche capability.
+            MOQ, lead time, cost, materials, packaging, and quality all trade off. We surface those tradeoffs before you commit.
           </p>
-          <div class="meta">Outcome: better fit</div>
+          <div class="meta">Outcome: better decisions</div>
         </div>
 
         <div class="card">
-          <h3>QC isn’t optional</h3>
+          <h3>Quality is designed</h3>
           <p>
-            We design checkpoints and acceptance criteria around your product risk so problems are caught before they ship.
+            We treat QC as a system: tolerances, checkpoints, acceptance criteria, and escalation paths — not a last-minute inspection.
           </p>
           <div class="meta">Outcome: consistent output</div>
         </div>
@@ -158,32 +191,15 @@
     <section class="reveal">
       <div class="sectionHead">
         <h2>Experience</h2>
-        <div class="note">Execution across categories — built for repeatability.</div>
+        <div class="note">Built for repeatability.</div>
       </div>
 
       <div class="panel reveal">
-        <p style="margin:0; color:rgba(14,15,18,.72);">
-          With <b>75+ years of combined experience</b>, we’ve supported consumer products across apparel, accessories, hard goods,
-          packaging, and retail-ready preparation. The common thread: we build a process you can reuse, so future runs become easier.
+        <p style="margin:0; color:rgba(14,15,18,.72); font-size:15px; line-height:1.8;">
+          With <b>75+ years of combined experience</b>, we’ve supported consumer products across apparel, accessories,
+          packaging, hard goods, and retail-ready prep. The common thread is always the same:
+          a process that turns chaos into predictable execution.
         </p>
-      </div>
-
-      <div class="grid3 stagger reveal" style="margin-top:12px;">
-        <div class="card">
-          <h3>Categories we touch</h3>
-          <p>Apparel, accessories, packaging, hard goods, kitting/assembly, printed goods, retail prep.</p>
-          <div class="meta">Built to match capabilities</div>
-        </div>
-        <div class="card">
-          <h3>Where issues hide</h3>
-          <p>Specs, tolerances, packaging, lead times, MOQ tradeoffs, and “final mile” 3PL/retail requirements.</p>
-          <div class="meta">We pressure-test early</div>
-        </div>
-        <div class="card">
-          <h3>What we optimize</h3>
-          <p>Timeline realism, quality consistency, and a smooth reorder process once the first run is successful.</p>
-          <div class="meta">Predictability over hype</div>
-        </div>
       </div>
     </section>
 
@@ -191,19 +207,21 @@
     <section class="reveal">
       <div class="panel reveal">
         <div class="sectionHead" style="margin-bottom:8px;">
-          <h2>Next step</h2>
-          <div class="note">Fast fit-check. Clear answers.</div>
+          <h2>Work with us</h2>
+          <div class="note">Fast fit-check. Clear next steps.</div>
         </div>
+
         <p style="margin:0; color:rgba(14,15,18,.72);">
           If you have a spec, reference product, existing quote, or packaging dieline — bring it.
           We’ll tell you quickly what’s realistic and what the path looks like.
         </p>
+
         <div class="ctaRow" style="margin-top:14px;">
           <a class="btn primary" data-calendly href="#"
              onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'About Bottom CTA'});}">
             Book a 15-min call <span class="arrow">↗</span>
           </a>
-          <a class="btn ghost" data-nav href="./services.html">View services</a>
+          <a class="btn ghost" data-nav href="./services.html">See services</a>
         </div>
       </div>
     </section>
