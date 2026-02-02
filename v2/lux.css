@@ -566,3 +566,63 @@ footer{
   margin-top: var(--s6);
   font-size: 13px;
 }
+
+/* ===== Always-on-screen CTAs (Call + Intake) ===== */
+.stickyCtas{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  z-index: 60;
+  pointer-events: none; /* allow clicks only on buttons */
+}
+.stickyCtas .inner{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+  display:flex;
+  justify-content:flex-end;
+}
+.stickyCtas .bar{
+  pointer-events: auto;
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  padding: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(14,15,18,.12);
+  background: rgba(255,255,255,.84);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.14);
+}
+
+/* On desktop, keep it minimal (right side) */
+@media (min-width: 921px){
+  .stickyCtas .bar{
+    padding: 10px;
+  }
+}
+
+/* On mobile, make it full-width “bottom bar” */
+@media (max-width: 920px){
+  .stickyCtas{
+    bottom: 12px;
+  }
+  .stickyCtas .inner{
+    justify-content:center;
+  }
+  .stickyCtas .bar{
+    width: min(560px, calc(100% - 24px));
+    justify-content: space-between;
+  }
+  .stickyCtas .bar .btn{
+    flex: 1 1 auto;
+    white-space: nowrap;
+  }
+}
+
+/* Prevent content being hidden behind the fixed CTA bar */
+body{
+  padding-bottom: 96px;
+}
