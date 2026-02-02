@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="/favicon.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
   <title>a26 Products</title>
-  <meta name="description" content="We match you with the right factory and run sampling, production, and QC end-to-end — so you ship reliably without building an internal sourcing team." />
-
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="Operator-led sourcing, sampling, production management, and QC — so you ship reliably." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./lux.css?v=7" />
+  <link rel="stylesheet" href="./lux.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWVP0EBRBC"></script>
@@ -27,196 +25,271 @@
 </head>
 
 <body>
+  <!-- Overlay starts ON, lux.js fades it off on load -->
+  <div class="pageFade on"></div>
+
   <div class="bgWash"></div>
   <div class="grain"></div>
 
-  <header class="header">
-    <div class="container topbar">
-      <a class="brand" href="./index.html">
+  <header>
+  <div class="container">
+    <div class="topbar">
+      <a class="brand" href="./">
         <span class="aLower">a</span>26 PRODUCTS
       </a>
 
-      <!-- Keep About + Services visible on all sizes -->
-      <nav class="navLinks">
-        <a href="./about.html">About</a>
-        <a href="./services.html">Services</a>
+      <nav>
+        <a data-nav href="./about.html">About</a>
+        <a data-nav href="./services.html">Services</a>
       </nav>
 
-      <!-- Desktop-only header CTAs -->
       <div class="headerCtas">
         <a class="btn ghost" href="#intake">Start intake</a>
-        <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener"
+
+        <a class="btn primary" data-calendly href="#"
            onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Header CTA'});}">
           Book a call <span class="arrow">↗</span>
         </a>
       </div>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <main class="container">
 
     <!-- HERO -->
-    <section class="hero reveal">
+    <section class="reveal">
       <div class="kicker">Sourcing + production execution</div>
-
       <h1 class="h1">Manufacturing, made predictable.</h1>
-
       <p class="lede">
-        We match you with the right factory and run sampling, production, and QC end-to-end — so you ship reliably
-        without building an internal sourcing team.
+        We match you with the right factory and run sampling, production, and QC end-to-end — so you ship reliably without building an internal sourcing team.
       </p>
 
       <div class="ctaRow">
-        <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener"
+        <a class="btn primary" data-calendly href="#"
            onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Hero CTA'});}">
           Discuss your product <span class="arrow">↗</span>
         </a>
         <a class="btn ghost" href="#intake">Start product intake</a>
       </div>
 
-      <div class="heroCard stagger">
-        <div class="heroMiniTitle">What you get</div>
-        <div class="heroPills">
-          <div class="pillCard"><span class="dot"></span>Factory match (fit-based)</div>
-          <div class="pillCard"><span class="dot"></span>Sampling → spec lock</div>
-          <div class="pillCard"><span class="dot"></span>Production management</div>
-          <div class="pillCard"><span class="dot"></span>QC checkpoints</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHAT YOU GET (improved visually, not “AI pills”) -->
-    <section class="section reveal" id="what-you-get">
-      <div class="sectionHead">
-        <h2>What you get</h2>
-        <div class="note">Clear steps. Clear owners. No chaos.</div>
-      </div>
-
-      <div class="cardWrap">
-        <div class="cardTop">
-          <h3>Clear milestones. Clear owners. No chaos.</h3>
-          <p>You’re not buying “sourcing.” You’re buying a calm, repeatable process that reduces risk and saves time.</p>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <div class="kTag"><span class="kDot"></span>Factory match (fit-based)</div>
-            <b>The right factory, for your product</b>
-            <p>We match based on capability and constraints — not a random list.</p>
+      <div class="heroGrid">
+        <div class="heroCard reveal" data-parallax="0.04">
+          <div class="kicker">What you get</div>
+          <div style="margin-top:10px; font-family:'Space Grotesk',Inter,system-ui; font-size:22px; letter-spacing:-.02em; line-height:1.1;">
+            Clear milestones. Clear owners. No chaos.
           </div>
-
-          <div class="card">
-            <div class="kTag"><span class="kDot"></span>Sampling → spec lock</div>
-            <b>From sample to production-ready</b>
-            <p>We run iterations, tighten expectations, and lock what matters before production.</p>
-          </div>
-
-          <div class="card">
-            <div class="kTag"><span class="kDot"></span>Production management</div>
-            <b>Timelines that don’t drift</b>
-            <p>We manage milestones, communication, and issue resolution so things keep moving.</p>
-          </div>
-
-          <div class="card">
-            <div class="kTag"><span class="kDot"></span>QC checkpoints</div>
-            <b>Quality checks before it ships</b>
-            <p>We set checkpoints so issues surface early — not after the container arrives.</p>
+          <div class="badgeRow">
+            <span class="badge"><span class="dot"></span> Factory match (fit-based)</span>
+            <span class="badge"><span class="dot"></span> Sampling → spec lock</span>
+            <span class="badge"><span class="dot"></span> Production management</span>
+            <span class="badge"><span class="dot"></span> QC checkpoints</span>
           </div>
         </div>
+
+        <div class="heroCard reveal" data-parallax="0.06">
+          <div class="kicker">For operators</div>
+          <div style="margin-top:10px; font-family:'Space Grotesk',Inter,system-ui; font-size:18px; letter-spacing:-.01em; line-height:1.25;">
+            You’re not buying “sourcing.” You’re buying predictability.
+          </div>
+          <p style="margin-top:12px; color:rgba(14,15,18,.70); font-size:14.5px; line-height:1.65;">
+            Most projects fail on the boring stuff: unclear specs, weak vendor fit, missed milestones, and avoidable quality issues.
+            We run a simple process designed to reduce risk.
+          </p>
+        </div>
+      </div>
+
+      <div class="marquee" aria-label="Capabilities marquee">
+        <div class="track">
+          <span class="pill2">Factory matching</span>
+          <span class="pill2">Sampling & iteration</span>
+          <span class="pill2">Spec packs</span>
+          <span class="pill2">Packaging coordination</span>
+          <span class="pill2">Milestone tracking</span>
+          <span class="pill2">QC plan + release</span>
+          <span class="pill2">Repeat order playbooks</span>
+
+          <span class="pill2">Factory matching</span>
+          <span class="pill2">Sampling & iteration</span>
+          <span class="pill2">Spec packs</span>
+          <span class="pill2">Packaging coordination</span>
+          <span class="pill2">Milestone tracking</span>
+          <span class="pill2">QC plan + release</span>
+          <span class="pill2">Repeat order playbooks</span>
+        </div>
       </div>
     </section>
 
-    <!-- WHO THIS IS FOR -->
-    <section class="section reveal" id="who">
+    <hr class="sep" />
+
+   <!-- WHAT WE DO -->
+<section id="work" class="reveal">
+  <div class="sectionHead">
+    <h2>What we do</h2>
+    <div class="note">We take responsibility for getting your product made — correctly, on time, and ready to scale.</div>
+  </div>
+
+  <div class="grid3 stagger reveal">
+    <div class="card">
+      <h3>We find the right factory</h3>
+      <p>
+        Not the cheapest. Not a random intro.
+        The right fit for your product, budget, timeline, and quality expectations.
+      </p>
+      <div class="meta">Outcome: you don’t waste months with the wrong supplier</div>
+    </div>
+
+    <div class="card">
+      <h3>We run the back-and-forth</h3>
+      <p>
+        Samples, changes, questions, revisions — we handle the communication and coordination
+        so you’re not managing factories directly.
+      </p>
+      <div class="meta">Outcome: you stay focused on the business, not the busywork</div>
+    </div>
+
+    <div class="card">
+      <h3>We make sure it’s done right</h3>
+      <p>
+        We stay involved through production so issues get caught early — before they become
+        expensive surprises after everything ships.
+      </p>
+      <div class="meta">Outcome: fewer surprises, fewer costly fixes</div>
+    </div>
+  </div>
+
+  <div class="panel reveal" style="margin-top:14px;">
+    <p style="margin:0; color:rgba(14,15,18,.72); line-height:1.8;">
+      Most manufacturing problems come from things slipping through the cracks.
+      <b>Our job is to make sure they don’t.</b>
+    </p>
+  </div>
+</section>
+
+    <!-- WHY -->
+    <section id="why" class="reveal">
       <div class="sectionHead">
-        <h2>Who this is for</h2>
-        <div class="note">If this sounds like you, we’re probably a fit.</div>
+        <h2>Why a26</h2>
+        <div class="note">A calmer process that protects timelines and quality.</div>
       </div>
 
-      <div class="grid3">
-        <div class="card">
-          <h3>Founders launching something new</h3>
-          <p>You want a clean path from idea → sample → first run without becoming a sourcing manager.</p>
-          <div class="meta">Best for: first production run, new SKUs</div>
+      <div class="panel statement reveal">
+        <div class="bigType">
+          You’re buying <span class="gold">predictability</span>.<br/>
+          Not supplier roulette.
         </div>
+        <div class="smallList">
+          <b>Clarity upfront</b> so quotes and timelines aren’t fantasy.<br/>
+          <b>Fit-based vendor selection</b> (capability + reliability).<br/>
+          <b>Milestone execution</b> with early issue resolution.<br/>
+          <b>QC checkpoints</b> before shipment release.<br/>
+          <b>Reorder playbooks</b> so future runs get easier.
+        </div>
+      </div>
 
-        <div class="card">
-          <h3>Teams fixing a stuck project</h3>
-          <p>You’ve got a supplier (or tried sourcing) and it’s messy — timelines, quality, or communication.</p>
-          <div class="meta">Best for: resets, stalled launches</div>
-        </div>
-
-        <div class="card">
-          <h3>Brands scaling what already works</h3>
-          <p>You need more predictability as volume increases — and you want repeat orders to feel routine.</p>
-          <div class="meta">Best for: growth, repeat orders</div>
-        </div>
+      <div class="ctaRow" style="margin-top:16px;">
+        <a class="btn primary" data-calendly href="#"
+           onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Why CTA'});}">
+          Book a 15-min call <span class="arrow">↗</span>
+        </a>
+        <a class="btn ghost" href="#intake">Or start intake</a>
       </div>
     </section>
 
-    <!-- CAROUSEL (same content, not pill-y) -->
-    <section class="section reveal" id="capabilities">
-      <div class="sectionHead">
-        <h2>Capabilities</h2>
-        <div class="note">Examples of what we run end-to-end.</div>
-      </div>
+   <!-- PROCESS -->
+<section id="process" class="reveal">
+  <div class="sectionHead">
+    <h2>How it works</h2>
+    <div class="note">Three steps. Clear ownership. No chaos.</div>
+  </div>
 
-      <div class="carouselRow" aria-label="Capabilities carousel">
-        <div class="carouselTrack">
-          <!-- set A -->
-          <div class="chip"><span class="dot"></span>Repeat order playbooks</div>
-          <div class="chip"><span class="dot"></span>Factory matching</div>
-          <div class="chip"><span class="dot"></span>Sampling & iteration</div>
-          <div class="chip"><span class="dot"></span>Spec packs</div>
-          <div class="chip"><span class="dot"></span>Packaging coordination</div>
-          <div class="chip"><span class="dot"></span>Milestone schedules</div>
-          <div class="chip"><span class="dot"></span>QC checkpoints</div>
-          <div class="chip"><span class="dot"></span>Issue resolution</div>
+  <div class="processWrap reveal">
+    <div class="processRail" aria-hidden="true"></div>
 
-          <!-- set B (duplicate for seamless loop) -->
-          <div class="chip"><span class="dot"></span>Repeat order playbooks</div>
-          <div class="chip"><span class="dot"></span>Factory matching</div>
-          <div class="chip"><span class="dot"></span>Sampling & iteration</div>
-          <div class="chip"><span class="dot"></span>Spec packs</div>
-          <div class="chip"><span class="dot"></span>Packaging coordination</div>
-          <div class="chip"><span class="dot"></span>Milestone schedules</div>
-          <div class="chip"><span class="dot"></span>QC checkpoints</div>
-          <div class="chip"><span class="dot"></span>Issue resolution</div>
+    <div class="processSteps stagger">
+      <div class="pStep card">
+        <div class="pTop">
+          <div class="pNum">01</div>
+          <div class="pTitle">
+            <h3>We get aligned</h3>
+            <p class="pSub">A quick intake + call to understand the product, priorities, and what “good” looks like.</p>
+          </div>
+        </div>
+
+        <div class="pBody">
+          <p>
+            You tell us your goals, budget range, timeline, and any non-negotiables.
+            If something won’t work, we’ll tell you early — before you spend weeks going in circles.
+          </p>
+          <div class="meta">Outcome: a clear plan and a realistic path forward</div>
         </div>
       </div>
-    </section>
 
-    <!-- FINANCING (simple + premium) -->
-    <section class="section reveal" id="financing">
-      <div class="sectionHead">
-        <h2>Financing</h2>
-        <div class="note">Case-by-case availability for qualified projects.</div>
+      <div class="pStep card">
+        <div class="pTop">
+          <div class="pNum">02</div>
+          <div class="pTitle">
+            <h3>We find the right partner</h3>
+            <p class="pSub">We match you with a factory that fits your product — not a random intro.</p>
+          </div>
+        </div>
+
+        <div class="pBody">
+          <p>
+            We source based on fit: capability, reliability, and what it takes to hit your quality bar.
+            You get a simple recommendation with the tradeoffs clearly explained.
+          </p>
+          <div class="meta">Outcome: confident selection without supplier roulette</div>
+        </div>
       </div>
 
-      <div class="panel">
-        <h3 class="panelTitle">Production financing (case-by-case)</h3>
-        <p class="panelText">
-          For qualified projects, financing may be available to support sampling, production, or initial inventory.
-          Financing is not guaranteed and is subject to eligibility, underwriting, and third-party approval.
-        </p>
-      </div>
-    </section>
+      <div class="pStep card">
+        <div class="pTop">
+          <div class="pNum">03</div>
+          <div class="pTitle">
+            <h3>We run execution</h3>
+            <p class="pSub">Samples → production → quality checks, managed end-to-end.</p>
+          </div>
+        </div>
 
-    <!-- INTAKE (bottom) -->
-    <section class="section reveal" id="intake">
+        <div class="pBody">
+          <p>
+            We handle the back-and-forth, keep things moving, and stay close through production so issues get caught early.
+            When it ships, we document what worked so reorders become easier.
+          </p>
+          <div class="meta">Outcome: smoother launch + an easier second run</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel reveal" style="margin-top:14px;">
+      <p style="margin:0; color:rgba(14,15,18,.72); line-height:1.8;">
+        The goal isn’t to “source.” The goal is to <b>ship reliably</b> — and make the next order feel routine.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <hr class="sep" />
+
+    <!-- INTAKE MUST BE BOTTOM -->
+    <section id="intake" class="reveal">
       <div class="sectionHead">
         <h2>Start product intake</h2>
-        <div class="note">2–3 minutes. You’ll be redirected to book a call.</div>
+        <div class="note">2–3 minutes. Then you’ll book a call.</div>
       </div>
 
-      <div class="panel">
-        <p class="panelText">Share the basics so we can route you to the right process and manufacturers.</p>
+      <div class="panel reveal">
+        <p style="color:rgba(14,15,18,.70);">Share the basics so we can route you to the right process and manufacturers.</p>
 
         <form id="intakeForm" action="https://formspree.io/f/mlgnrkqa" method="POST">
+          <input type="hidden" name="_next" value="https://calendly.com/a26companies/15min">
+          <input type="hidden" name="_redirect" value="https://calendly.com/a26companies/15min">
           <input type="hidden" name="_subject" value="New a26 Products intake">
           <input type="text" name="_gotcha" style="display:none">
 
-          <div class="fieldRow">
+          <div class="formRow">
             <div>
               <label>Name</label>
               <input name="name" placeholder="Jane Founder" required />
@@ -227,7 +300,7 @@
             </div>
           </div>
 
-          <div class="fieldRow">
+          <div class="formRow">
             <div>
               <label>Product category</label>
               <input name="category" placeholder="Apparel, home goods, accessories…" />
@@ -243,7 +316,7 @@
             </div>
           </div>
 
-          <div class="fieldRow">
+          <div class="formRow">
             <div>
               <label>Target monthly volume</label>
               <input name="volume" placeholder="e.g., 2,000 units/month" />
@@ -254,7 +327,7 @@
             </div>
           </div>
 
-          <div class="fieldRow">
+          <div class="formRow">
             <div>
               <label>Target unit cost (optional)</label>
               <input name="unit_cost" placeholder="e.g., $6 landed / $3 ex-works" />
@@ -276,8 +349,9 @@
             <textarea name="details" placeholder="Briefly describe the product, materials, packaging, any current supplier, and what’s stuck."></textarea>
           </div>
 
-          <div class="ctaRow">
+          <div class="ctaRow" style="margin-top:12px;">
             <button class="btn primary" type="submit">Submit intake</button>
+            <a class="btn ghost" data-calendly href="#">Or book a call</a>
           </div>
 
           <p class="micro">After you submit, you’ll be redirected to book a 15-minute call.</p>
@@ -285,51 +359,12 @@
       </div>
     </section>
 
-    <footer class="footer">
-      © <span id="y"></span> a26 Products • <a href="mailto:products@a26cos.com">products@a26cos.com</a>
+    <footer class="reveal">
+      © <span id="y"></span> a26 Products • <a href="mailto:products@a26cos.com" style="text-decoration:underline;">products@a26cos.com</a>
     </footer>
 
   </main>
 
-  <script src="./lux.js?v=7"></script>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("intakeForm");
-      if (!form) return;
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        if (formData.get("_gotcha")) return;
-
-        try {
-          const res = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            headers: { "Accept": "application/json" }
-          });
-
-          if (res.ok) {
-            if (typeof window.gtag === "function") {
-              window.gtag("event", "intake_submit", {
-                event_category: "lead",
-                event_label: "product_intake"
-              });
-            }
-            window.location.href = "https://calendly.com/a26companies/15min";
-            return;
-          }
-
-          alert("Submission failed. Please try again or email products@a26cos.com.");
-        } catch (err) {
-          alert("Network error. Please email products@a26cos.com.");
-        }
-      });
-    });
-  </script>
+  <script src="./lux.js"></script>
 </body>
 </html>
