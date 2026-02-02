@@ -769,3 +769,57 @@ header .topbar { position: relative; }
     text-decoration: none;
   }
 }
+
+/* --- FORCE mobile menu hidden unless opened --- */
+.mobile-menu { 
+  display: none !important; 
+}
+
+.mobile-menu.is-open { 
+  display: block !important; 
+}
+
+/* hamburger hidden on desktop */
+.mobile-menu-toggle { 
+  display: none !important; 
+}
+
+/* mobile behavior */
+@media (max-width: 768px) {
+  .desktop-nav,
+  .headerCtas {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.12);
+    background: rgba(255,255,255,0.9);
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .mobile-menu.is-open {
+    position: absolute;
+    right: 16px;
+    top: 64px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+    z-index: 9999;
+    min-width: 220px;
+  }
+
+  .mobile-menu.is-open a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+  }
+}
