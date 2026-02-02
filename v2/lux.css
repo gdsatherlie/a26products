@@ -481,3 +481,32 @@ input:focus,textarea:focus,select:focus{
   color:rgba(14,15,18,.56);
   font-size:13px;
 }
+/* ================================
+   HEADER FIX (PASTE AT VERY BOTTOM)
+   ================================ */
+
+/* Works if you have <header> ... <nav> ... buttons inside */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:16px 22px;
+}
+
+/* Space between About / Services links */
+header nav{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+/* If you have a wrapper for buttons, this spaces them */
+header .actions,
+header .cta,
+header .buttons{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-left:auto;
+}
