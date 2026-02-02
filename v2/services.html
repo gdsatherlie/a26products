@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>a26 Products — Services</title>
+  <meta name="description" content="Services & pricing for sourcing, sampling, production management, and QC." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./lux.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWVP0EBRBC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-WWVP0EBRBC');
+  </script>
+</head>
+
+<body>
+  <!-- Overlay starts ON, lux.js fades it off on load -->
+  <div class="pageFade on"></div>
+
+  <div class="bgWash"></div>
+  <div class="grain"></div>
+
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <a class="brand" data-nav href="./preview.html">
+          <span class="aLower">a</span>26 PRODUCTS
+        </a>
+
+        <nav>
+          <a data-nav href="./preview.html">Home</a>
+          <a data-nav href="./services.html">Services</a>
+          <a data-nav href="./about.html">About</a>
+          <a class="navCta" data-calendly href="#">Discuss your product</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="reveal">
+      <div class="kicker">Services & pricing</div>
+      <h1 class="h1">Operator-led execution, priced simply.</h1>
+      <p class="lede">
+        Starting-at pricing below covers <b>a26’s service fees</b>. Final scope depends on SKU count, iteration needs, and timeline.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" data-calendly href="#"
+           onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Services Hero CTA'});}">
+          Book a 15-min call <span class="arrow">↗</span>
+        </a>
+        <a class="btn ghost" data-nav href="./preview.html#intake">Or submit intake</a>
+      </div>
+    </section>
+
+    <hr class="sep" />
+
+    <!-- PRICING -->
+    <section class="reveal">
+      <div class="sectionHead">
+        <h2>Pricing</h2>
+        <div class="note">Starting at. Scope varies by category, SKUs, and complexity.</div>
+      </div>
+
+      <div class="priceGrid stagger reveal">
+        <div class="price">
+          <div class="top">
+            <h3>Discovery & factory shortlist</h3>
+            <div class="amt">Starting at $2,000</div>
+          </div>
+          <div class="meta">Typically 5–10 business days. Best for new products or when you’re stuck.</div>
+          <ul>
+            <li>Requirements brief (targets, constraints, timelines, risks)</li>
+            <li>Capability match + shortlist of best-fit factories</li>
+            <li>MOQ/lead time/QC risk flags + recommended path</li>
+            <li>Sampling plan and decision checkpoints</li>
+          </ul>
+          <div class="deliverables">
+            <b>What you receive:</b> requirements brief, shortlist + comparison notes, risks & tradeoffs summary, recommended supplier path, and a proposed sampling/production timeline.
+          </div>
+        </div>
+
+        <div class="price">
+          <div class="top">
+            <h3>Sampling sprint</h3>
+            <div class="amt">Starting at $4,000</div>
+          </div>
+          <div class="meta">Typically 2–6 weeks depending on iteration count and responsiveness.</div>
+          <ul>
+            <li>Sample requests + factory communication</li>
+            <li>Spec refinement + production-ready spec pack</li>
+            <li>Packaging coordination (dielines / proofs as needed)</li>
+            <li>Go / no-go recommendation for production</li>
+          </ul>
+          <div class="deliverables">
+            <b>What you receive:</b> sample iteration tracking, final spec pack, packaging checklist, and a production-ready next steps plan with lead times and decision points.
+          </div>
+        </div>
+
+        <div class="price">
+          <div class="top">
+            <h3>Production management & QC</h3>
+            <div class="amt">Starting at $2,500/mo</div>
+          </div>
+          <div class="meta">Active oversight during production runs. Best for launches and repeat orders.</div>
+          <ul>
+            <li>Milestone schedule + weekly status updates</li>
+            <li>Issue resolution and timeline enforcement</li>
+            <li>QC plan + checkpoints (pre / in-line / final)</li>
+            <li>Reorder readiness + supplier performance notes</li>
+          </ul>
+          <div class="deliverables">
+            <b>What you receive:</b> milestone schedule, weekly reporting, QC plan/checkpoint documentation, issue log + resolutions, and a repeat-order process you can reuse.
+          </div>
+        </div>
+
+        <div class="price">
+          <div class="top">
+            <h3>End-to-end launch partner</h3>
+            <div class="amt">Starting at $7,500</div>
+          </div>
+          <div class="meta">One operator owns match → sample → produce → QC → release.</div>
+          <ul>
+            <li>Discovery + shortlist + sampling sprint</li>
+            <li>Production execution + QC checkpoints</li>
+            <li>Packaging/pack-out prep and 3PL/retail readiness</li>
+            <li>Launch timeline management + escalation handling</li>
+          </ul>
+          <div class="deliverables">
+            <b>What you receive:</b> integrated plan, spec pack, launch milestone schedule, QC plan/checkpoints, and a post-launch reorder playbook.
+          </div>
+        </div>
+      </div>
+
+      <div class="disclaimer reveal" style="margin-top:12px;">
+        <b>Fees-only clarification:</b> Pricing above is for <b>a26’s services</b> only.
+        It does <b>not</b> include materials, samples, tooling/molds, production costs, packaging costs,
+        freight, duties/taxes, third-party inspections, lab testing, or other pass-through expenses.
+        Those are quoted separately based on the product and factory.
+      </div>
+    </section>
+
+    <hr class="sep" />
+
+    <!-- FINANCING -->
+    <section class="reveal">
+      <div class="sectionHead">
+        <h2>Financing</h2>
+        <div class="note">Optional. Case-by-case.</div>
+      </div>
+
+      <div class="panel reveal">
+        <p style="color:rgba(14,15,18,.72); margin:0;">
+          <b>Production financing (case-by-case):</b> For qualified projects, financing may be available to support sampling,
+          production, or initial inventory. Financing is not guaranteed and is subject to eligibility, underwriting, and third-party approval.
+        </p>
+      </div>
+    </section>
+
+    <footer class="reveal">
+      © <span id="y"></span> a26 Products • <a href="mailto:products@a26cos.com" style="text-decoration:underline;">products@a26cos.com</a>
+    </footer>
+
+  </main>
+
+  <script src="./lux.js"></script>
+</body>
+</html>
