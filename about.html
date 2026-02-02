@@ -27,26 +27,39 @@
 <body>
   <div class="pageFade on"></div>
 
-  <header>
-    <div class="container">
-      <div class="topbar">
-        <a class="brand" data-nav href="./preview.html">
-          <span class="aLower">a</span>26 PRODUCTS
-        </a>
+ <header>
+  <div class="container">
+    <div class="topbar">
+      <a class="brand" href="./preview.html">
+        <span class="aLower">a</span>26 PRODUCTS
+      </a>
 
-        <nav>
-          <a data-nav href="./about.html">About</a>
-          <a data-nav href="./services.html">Services</a>
-        </nav>
+      <!-- Desktop nav (shown on desktop, hidden on mobile via CSS) -->
+      <nav class="desktop-nav">
+        <a data-nav href="./about.html">About</a>
+        <a data-nav href="./services.html">Services</a>
+      </nav>
 
-        <div class="headerCtas">
-          <a class="btn ghost" data-nav href="./preview.html#intake">Start intake</a>
-          <a class="btn primary" data-calendly href="#"
-             onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'About Header CTA'});}">
-            Book a call <span class="arrow">↗</span>
-          </a>
-        </div>
-      </div>
+<!-- Desktop CTAs (shown on desktop, hidden on mobile via CSS) -->
+<div class="headerCtas header-cta">
+  <a class="btn ghost" href="#intake">Start intake</a>
+
+  <a class="btn primary" data-calendly href="#"
+     onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Header CTA'});}">
+    Book a call <span class="arrow">↗</span>
+  </a>
+</div>
+
+<!-- Mobile-only hamburger -->
+<button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</button>
+
+
+
+    </div>
     </div>
   </header>
 
