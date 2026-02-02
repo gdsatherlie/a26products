@@ -927,3 +927,31 @@ header .topbar { position: relative; }
 .mobile-menu a:nth-child(4):hover{
   background: #000;
 }
+
+/* FINAL OVERRIDE: hamburger = 3 thick lines, no circle */
+@media (max-width: 768px){
+  header .mobile-menu-toggle{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:6px !important;
+
+    width:34px !important;
+    height:26px !important;
+
+    background:transparent !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    padding:0 !important;
+  }
+
+  header .mobile-menu-toggle span{
+    display:block !important;
+    width:34px !important;
+    height:4px !important;
+    background:#000 !important;
+    border-radius:2px !important;
+  }
+}
+
