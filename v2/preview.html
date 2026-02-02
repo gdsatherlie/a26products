@@ -25,21 +25,39 @@
 </head>
 
 <body>
+  <!-- Overlay starts ON, lux.js fades it off on load -->
   <div class="pageFade on"></div>
+
   <div class="bgWash"></div>
   <div class="grain"></div>
+
+  <!-- Always-on-screen CTA bar -->
+  <div class="stickyCtas" aria-label="Quick actions">
+    <div class="inner">
+      <div class="bar">
+        <a class="btn ghost" href="#intake">Start intake</a>
+        <a class="btn primary" data-calendly href="#"
+           onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Sticky CTA'});}">
+          Book a call <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <header>
     <div class="container">
       <div class="topbar">
-        <a class="brand" href="#">
-          <span><span class="aLower">a</span>26 PRODUCTS</span>
+        <a class="brand" href="./preview.html">
+          <span class="aLower">a</span>26 PRODUCTS
         </a>
 
         <nav>
           <a href="#work">What we do</a>
           <a href="#why">Why us</a>
-          <a href="#intake">Intake</a>
+          <a href="#process">Process</a>
+          <a data-nav href="./services.html">Services</a>
+          <a data-nav href="./about.html">About</a>
+          <a href="#intake">Start intake</a>
           <a class="navCta" data-calendly href="#">Discuss your product</a>
         </nav>
       </div>
@@ -57,14 +75,15 @@
       </p>
 
       <div class="ctaRow">
-        <a class="btn primary" data-calendly href="#">
+        <a class="btn primary" data-calendly href="#"
+           onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Hero CTA'});}">
           Discuss your product <span class="arrow">↗</span>
         </a>
         <a class="btn ghost" href="#intake">Start product intake</a>
       </div>
 
       <div class="heroGrid">
-        <div class="heroCard reveal">
+        <div class="heroCard reveal" data-parallax="0.04">
           <div class="kicker">What you get</div>
           <div style="margin-top:10px; font-family:'Space Grotesk',Inter,system-ui; font-size:22px; letter-spacing:-.02em; line-height:1.1;">
             Clear milestones. Clear owners. No chaos.
@@ -77,7 +96,7 @@
           </div>
         </div>
 
-        <div class="heroCard reveal">
+        <div class="heroCard reveal" data-parallax="0.06">
           <div class="kicker">For operators</div>
           <div style="margin-top:10px; font-family:'Space Grotesk',Inter,system-ui; font-size:18px; letter-spacing:-.01em; line-height:1.25;">
             You’re not buying “sourcing.” You’re buying predictability.
@@ -86,13 +105,9 @@
             Most projects fail on the boring stuff: unclear specs, weak vendor fit, missed milestones, and avoidable quality issues.
             We run a simple process designed to reduce risk.
           </p>
-          <div class="ctaRow" style="margin-top:14px;">
-            <a class="btn" href="#why">See how we work</a>
-          </div>
         </div>
       </div>
 
-      <!-- marquee -->
       <div class="marquee" aria-label="Capabilities marquee">
         <div class="track">
           <span class="pill2">Factory matching</span>
@@ -123,18 +138,18 @@
         <div class="note">Not “introductions.” We run the process end-to-end.</div>
       </div>
 
-      <div class="grid3">
-        <div class="card reveal">
+      <div class="grid3 stagger reveal">
+        <div class="card">
           <h3>Factory match</h3>
           <p>Shortlist suppliers based on your SKU, constraints, MOQ realities, lead time, and quality bar.</p>
           <div class="meta">Output: shortlist + rationale + risk flags</div>
         </div>
-        <div class="card reveal">
+        <div class="card">
           <h3>Sampling → spec lock</h3>
           <p>Run iterations, refine specs, and lock a production-ready spec pack (and packaging if needed).</p>
           <div class="meta">Output: approved sample + spec pack</div>
         </div>
-        <div class="card reveal">
+        <div class="card">
           <h3>Production + QC</h3>
           <p>Milestones, weekly status, issue resolution, and QC checkpoints before shipment release.</p>
           <div class="meta">Output: QC plan + release signoff</div>
@@ -149,7 +164,7 @@
         <div class="note">A calmer process that protects timelines and quality.</div>
       </div>
 
-      <div class="panel statement">
+      <div class="panel statement reveal">
         <div class="bigType">
           You’re buying <span class="gold">predictability</span>.<br/>
           Not supplier roulette.
@@ -168,18 +183,46 @@
            onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'Why CTA'});}">
           Book a 15-min call <span class="arrow">↗</span>
         </a>
-        <a class="btn ghost" href="#intake">Or submit intake</a>
+        <a class="btn ghost" href="#intake">Or start intake</a>
       </div>
     </section>
 
-    <!-- INTAKE (keeps your exact plumbing) -->
+    <!-- PROCESS -->
+    <section id="process" class="reveal">
+      <div class="sectionHead">
+        <h2>Process</h2>
+        <div class="note">Clear steps. Decision points. No fog.</div>
+      </div>
+
+      <div class="grid3 stagger reveal">
+        <div class="card">
+          <h3>1) Requirements</h3>
+          <p>We capture specs, constraints, MOQ realities, target costs, packaging needs, timeline, and risk.</p>
+          <div class="meta">Output: requirements brief</div>
+        </div>
+        <div class="card">
+          <h3>2) Shortlist</h3>
+          <p>We match capabilities and reliability to your product, then pressure-test lead times and QC readiness.</p>
+          <div class="meta">Output: shortlist + recommendation</div>
+        </div>
+        <div class="card">
+          <h3>3) Execute</h3>
+          <p>Sampling loop → spec lock → milestone production → QC checkpoints → release.</p>
+          <div class="meta">Output: shipped product, reorder playbook</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="sep" />
+
+    <!-- INTAKE MUST BE BOTTOM -->
     <section id="intake" class="reveal">
       <div class="sectionHead">
         <h2>Start product intake</h2>
         <div class="note">2–3 minutes. Then you’ll book a call.</div>
       </div>
 
-      <div class="panel">
+      <div class="panel reveal">
         <p style="color:rgba(14,15,18,.70);">Share the basics so we can route you to the right process and manufacturers.</p>
 
         <form id="intakeForm" action="https://formspree.io/f/mlgnrkqa" method="POST">
