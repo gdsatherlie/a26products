@@ -717,3 +717,55 @@ footer{
   margin-top: var(--s6);
   font-size: 13px;
 }
+
+/* ===== Mobile menu: desktop OFF, mobile ON ===== */
+header .mobile-menu-toggle,
+header .mobile-menu {
+  display: none !important;
+}
+
+/* Make sure dropdown anchors to the header row */
+header .topbar { position: relative; }
+
+@media (max-width: 768px) {
+  /* Hide desktop links + CTAs on mobile */
+  header .desktop-nav,
+  header .headerCtas {
+    display: none !important;
+  }
+
+  /* Show hamburger on mobile ONLY */
+  header .mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.12);
+    background: rgba(255,255,255,0.9);
+    cursor: pointer;
+    padding: 0;
+  }
+
+  /* Dropdown panel (hidden until JS adds .is-open) */
+  header + .mobile-menu.is-open {
+    display: block !important;
+    position: absolute;
+    right: 16px;
+    top: 64px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+    z-index: 9999;
+    min-width: 220px;
+  }
+
+  header + .mobile-menu.is-open a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+  }
+}
