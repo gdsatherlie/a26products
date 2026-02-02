@@ -717,55 +717,43 @@ footer{
   margin-top: var(--s6);
   font-size: 13px;
 }
-  /* ===== Mobile header: keep About/Services visible ===== */
+/* ===== Mobile header: show only About + Services (hide CTAs) ===== */
 @media (max-width: 820px){
+  /* Keep header clean and single-row */
   .topbar{
-    display:flex;
+    display:flex !important;
     align-items:center;
     justify-content:space-between;
-    gap: 10px;
+    gap: 12px;
   }
 
-  /* Keep nav visible on mobile */
+  /* Make sure nav is visible */
   .topbar nav{
     display:flex !important;
-    gap: 10px;
     align-items:center;
-    margin-left: auto; /* push to the right */
+    gap: 12px;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* Hide header buttons on mobile */
+  .topbar .headerCtas{
+    display:none !important;
+  }
+
+  /* Slightly tighten logo + links */
+  .topbar .brand{
+    white-space: nowrap;
   }
 
   .topbar nav a{
     font-size: 13px;
-    color: rgba(14,15,18,.62);
-    text-decoration: none;
     padding: 8px 8px;
     border-radius: 10px;
-    white-space: nowrap;
+    color: rgba(14,15,18,.62);
   }
-
   .topbar nav a:hover{
     background: rgba(14,15,18,.04);
     color: rgba(14,15,18,.82);
   }
-
-  /* Make sure CTAs still fit */
-  .headerCtas{
-    display:flex;
-    gap: 10px;
-    align-items:center;
-    flex: 0 0 auto;
-  }
-
-  .headerCtas .btn{
-    padding: 10px 12px;
-    font-size: 13px;
-    white-space: nowrap;
-  }
-
-  /* If the header ever wraps, keep it clean */
-  .brand{
-    white-space: nowrap;
-    flex: 0 0 auto;
-  }
 }
-
