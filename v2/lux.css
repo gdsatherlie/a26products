@@ -389,6 +389,82 @@ section{ padding: var(--s6) 0; scroll-margin-top: 92px; }
   .sectionHead{ flex-direction: column; align-items:flex-start; }
   .sectionHead .note{ text-align:left; }
 }
+/* ===== Process (How it works) ===== */
+.processWrap{
+  position: relative;
+  margin-top: 12px;
+}
+
+.processRail{
+  position:absolute;
+  left: 16px;
+  top: 10px;
+  bottom: 92px;
+  width: 1px;
+  background: rgba(14,15,18,.10);
+}
+
+.processSteps{
+  display:grid;
+  gap: 12px;
+}
+
+.pStep{
+  position: relative;
+  padding-left: 22px;
+}
+
+.pTop{
+  display:flex;
+  gap: 12px;
+  align-items:flex-start;
+}
+
+.pNum{
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 800;
+  letter-spacing: .06em;
+  font-size: 12px;
+  color: rgba(14,15,18,.82);
+  background: rgba(14,15,18,.04);
+  border: 1px solid rgba(14,15,18,.08);
+  position: relative;
+  z-index: 2;
+  margin-left: -6px; /* sit on the rail */
+}
+
+.pTitle h3{
+  margin: 0;
+}
+
+.pSub{
+  margin: 6px 0 0;
+  color: rgba(14,15,18,.62);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pBody{
+  margin-top: 10px;
+  color: rgba(14,15,18,.72);
+  font-size: 14.5px;
+  line-height: 1.75;
+}
+
+@media (max-width: 920px){
+  .processRail{
+    left: 14px;
+  }
+  .pStep{
+    padding-left: 18px;
+  }
+}
 
 /* Cards */
 .grid3{
