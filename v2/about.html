@@ -4,14 +4,14 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About — a26 Products</title>
-  <meta name="description" content="About a26 Products — operator-led sourcing and production management." />
+  <title>a26 Products — About</title>
+  <meta name="description" content="About a26 Products — operator-led sourcing, sampling, production management, and QC." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./lux.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWVP0EBRBC"></script>
@@ -25,99 +25,195 @@
 </head>
 
 <body>
-  <div class="bg">
+  <!-- Overlay starts ON, lux.js fades it off on load -->
+  <div class="pageFade on"></div>
 
-    <header class="header">
-      <div class="container">
-        <div class="topbar">
-          <a class="brand" href="./index.html"><span class="aLower">a</span>26 PRODUCTS</a>
+  <div class="bgWash"></div>
+  <div class="grain"></div>
 
-          <nav>
-            <a href="./services.html">Services</a>
-            <a href="./how-it-works.html">How it works</a>
-            <a href="./about.html">About</a>
-            <a class="navCta" data-calendly href="#">Discuss your product</a>
-          </nav>
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <a class="brand" data-nav href="./preview.html">
+          <span class="aLower">a</span>26 PRODUCTS
+        </a>
+
+        <nav>
+          <a data-nav href="./preview.html">Home</a>
+          <a data-nav href="./services.html">Services</a>
+          <a data-nav href="./about.html">About</a>
+          <a class="navCta" data-calendly href="#">Discuss your product</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="reveal">
+      <div class="kicker">About</div>
+      <h1 class="h1">A calmer way to manufacture.</h1>
+      <p class="lede">
+        a26 Products is an operator-led team built to reduce the chaos of sourcing and production.
+        We match you with the right factory and run execution end-to-end — sampling, production management, and QC —
+        so you can ship reliably without building an internal sourcing team.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" data-calendly href="#"
+           onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'About Hero CTA'});}">
+          Book a 15-min call <span class="arrow">↗</span>
+        </a>
+        <a class="btn ghost" data-nav href="./preview.html#intake">Or submit intake</a>
+      </div>
+
+      <div class="heroGrid" style="margin-top:44px;">
+        <div class="heroCard reveal" data-parallax="0.04">
+          <div class="kicker">What we believe</div>
+          <div style="margin-top:10px; font-family:'Space Grotesk',Inter,system-ui; font-size:22px; letter-spacing:-.02em; line-height:1.15;">
+            Predictability beats “cheap.”
+          </div>
+          <p style="margin-top:12px; color:rgba(14,15,18,.70); font-size:14.5px; line-height:1.65;">
+            Most manufacturing pain comes from unclear specs, vendor mismatch, missed milestones, and avoidable quality issues.
+            We’re built to prevent those failures with a simple process and tight execution.
+          </p>
+        </div>
+
+        <div class="heroCard reveal" data-parallax="0.06">
+          <div class="kicker">How we work</div>
+          <div style="margin-top:10px; font-family:'Space Grotesk',Inter,system-ui; font-size:18px; letter-spacing:-.01em; line-height:1.25;">
+            Fit-based sourcing + milestone discipline + QC checkpoints.
+          </div>
+          <div class="badgeRow" style="margin-top:14px;">
+            <span class="badge"><span class="dot"></span> Requirements first</span>
+            <span class="badge"><span class="dot"></span> Shortlist with rationale</span>
+            <span class="badge"><span class="dot"></span> Sampling loop</span>
+            <span class="badge"><span class="dot"></span> QC before release</span>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main class="container">
+    <hr class="sep" />
 
-      <section class="section tight">
-        <div class="kicker">About</div>
-        <div class="h1">Operator-led manufacturing support.</div>
-        <div class="lede">
-          a26 Products helps brands and operators ship physical products reliably by running the unglamorous parts: factory fit, sampling, production execution, and QC.
+    <!-- WHY WE EXIST -->
+    <section class="reveal">
+      <div class="sectionHead">
+        <h2>Why we exist</h2>
+        <div class="note">Because manufacturing shouldn’t feel like a gamble.</div>
+      </div>
+
+      <div class="panel statement reveal">
+        <div class="bigType">
+          You’re buying <span class="gold">predictability</span>.<br />
+          Not supplier roulette.
         </div>
-
-        <div class="ctaRow">
-          <a class="btn primary" data-calendly href="#">Discuss your product (15 min)</a>
-          <a class="btn ghost" href="./index.html#intake">Start product intake</a>
+        <div class="smallList">
+          <b>Clarity upfront</b> so quotes and timelines aren’t fantasy.<br/>
+          <b>Fit-based vendor selection</b> (capability + reliability).<br/>
+          <b>Milestone execution</b> with early issue resolution.<br/>
+          <b>QC checkpoints</b> before shipment release.<br/>
+          <b>Reorder playbooks</b> so future runs get easier.
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="sectionHead">
-          <h2>How we work</h2>
-          <div class="note">Clear steps, clear outputs, no chaos.</div>
-        </div>
+    <!-- WHAT MAKES A26 DIFFERENT -->
+    <section class="reveal">
+      <div class="sectionHead">
+        <h2>What makes us different</h2>
+        <div class="note">We run the work. We don’t just introduce vendors.</div>
+      </div>
 
-        <div class="grid3">
-          <div class="card">
-            <h3>Clarity first</h3>
-            <p>We define requirements and constraints early so supplier selection and quotes are grounded in reality.</p>
-          </div>
-          <div class="card">
-            <h3>Fit-based sourcing</h3>
-            <p>We match the product to the factory’s proven capability — not a directory or broker spray-and-pray.</p>
-          </div>
-          <div class="card">
-            <h3>Execution + QC</h3>
-            <p>Milestones, checkpoints, and early issue resolution so production stays predictable.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="sectionHead">
-          <h2>What you get</h2>
-          <div class="note">A calmer process and fewer expensive surprises.</div>
-        </div>
-
-        <div class="panel">
+      <div class="grid3 stagger reveal">
+        <div class="card">
+          <h3>Operator-led</h3>
           <p>
-            You should never wonder what’s happening or what the next decision is. Our job is to reduce risk and keep the project moving:
+            You get an accountable owner for the process — not a directory of factories.
+            We manage communication, timelines, and decisions.
           </p>
-          <div class="micro" style="margin-top:14px;">
-            • Requirements brief and constraints checklist<br/>
-            • Supplier shortlist with rationale + risk flags<br/>
-            • Sampling plan and spec pack to production-ready<br/>
-            • Milestone schedule and weekly status reporting<br/>
-            • QC plan and checkpoint release signoff
-          </div>
+          <div class="meta">Outcome: fewer surprises</div>
         </div>
-      </section>
 
-      <section class="section">
-        <div class="panel">
-          <p style="color:rgba(243,245,255,.92); font-weight:700; font-family:'Space Grotesk','Inter',system-ui;">
-            Ready to talk?
+        <div class="card">
+          <h3>Relationships + expansion</h3>
+          <p>
+            We prioritize manufacturers we already know and trust, and expand the network only when your product needs a niche capability.
           </p>
-          <div class="ctaRow" style="margin-top:12px;">
-            <a class="btn primary" data-calendly href="#">Discuss your product (15 min)</a>
-            <a class="btn ghost" href="mailto:products@a26cos.com?subject=a26%20Products%20—%20Discuss%20my%20product">Email products@a26cos.com</a>
-          </div>
+          <div class="meta">Outcome: better fit</div>
         </div>
-      </section>
 
-      <footer>
-        © <span id="y"></span> a26 Products • <a href="mailto:products@a26cos.com" style="text-decoration:underline;">products@a26cos.com</a>
-      </footer>
+        <div class="card">
+          <h3>QC isn’t optional</h3>
+          <p>
+            We design checkpoints and acceptance criteria around your product risk so problems are caught before they ship.
+          </p>
+          <div class="meta">Outcome: consistent output</div>
+        </div>
+      </div>
+    </section>
 
-    </main>
-  </div>
+    <!-- EXPERIENCE -->
+    <section class="reveal">
+      <div class="sectionHead">
+        <h2>Experience</h2>
+        <div class="note">Execution across categories — built for repeatability.</div>
+      </div>
 
-  <script src="./app.js"></script>
+      <div class="panel reveal">
+        <p style="margin:0; color:rgba(14,15,18,.72);">
+          With <b>75+ years of combined experience</b>, we’ve supported consumer products across apparel, accessories, hard goods,
+          packaging, and retail-ready preparation. The common thread: we build a process you can reuse, so future runs become easier.
+        </p>
+      </div>
+
+      <div class="grid3 stagger reveal" style="margin-top:12px;">
+        <div class="card">
+          <h3>Categories we touch</h3>
+          <p>Apparel, accessories, packaging, hard goods, kitting/assembly, printed goods, retail prep.</p>
+          <div class="meta">Built to match capabilities</div>
+        </div>
+        <div class="card">
+          <h3>Where issues hide</h3>
+          <p>Specs, tolerances, packaging, lead times, MOQ tradeoffs, and “final mile” 3PL/retail requirements.</p>
+          <div class="meta">We pressure-test early</div>
+        </div>
+        <div class="card">
+          <h3>What we optimize</h3>
+          <p>Timeline realism, quality consistency, and a smooth reorder process once the first run is successful.</p>
+          <div class="meta">Predictability over hype</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="reveal">
+      <div class="panel reveal">
+        <div class="sectionHead" style="margin-bottom:8px;">
+          <h2>Next step</h2>
+          <div class="note">Fast fit-check. Clear answers.</div>
+        </div>
+        <p style="margin:0; color:rgba(14,15,18,.72);">
+          If you have a spec, reference product, existing quote, or packaging dieline — bring it.
+          We’ll tell you quickly what’s realistic and what the path looks like.
+        </p>
+        <div class="ctaRow" style="margin-top:14px;">
+          <a class="btn primary" data-calendly href="#"
+             onclick="if(typeof window.gtag==='function'){gtag('event','calendly_click',{event_category:'conversion',event_label:'About Bottom CTA'});}">
+            Book a 15-min call <span class="arrow">↗</span>
+          </a>
+          <a class="btn ghost" data-nav href="./services.html">View services</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="reveal">
+      © <span id="y"></span> a26 Products • <a href="mailto:products@a26cos.com" style="text-decoration:underline;">products@a26cos.com</a>
+    </footer>
+
+  </main>
+
+  <script src="./lux.js"></script>
 </body>
 </html>
