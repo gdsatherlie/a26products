@@ -39,6 +39,7 @@ body{
   letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   overflow-x:hidden;
+  padding-top: 74px;
 }
 a{ color:inherit; text-decoration:none; }
 .container{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
@@ -139,7 +140,25 @@ nav a:hover{
 @media (max-width: 920px){
   nav{ display:none; }
 }
+.headerCtas{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  margin-left: 6px;
+}
 
+/* Make header buttons slightly smaller than main buttons */
+.headerCtas .btn{
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+/* On smaller screens, keep buttons visible even if nav is hidden */
+@media (max-width: 920px){
+  .headerCtas{
+    display:flex;
+  }
+}
 /* Sections */
 section{ padding: var(--s6) 0; scroll-margin-top: 92px; }
 @media (max-width: 920px){ section{ padding: var(--s5) 0; } }
