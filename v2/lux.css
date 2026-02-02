@@ -95,11 +95,30 @@ header{
   border-bottom: 1px solid rgba(14,15,18,.08);
 }
 .topbar{
-  display:flex;
+  display:grid;
+  grid-template-columns: auto 1fr auto; /* logo | nav | CTAs */
   align-items:center;
-  justify-content:space-between;
-  gap: 16px;
+  gap: 14px;
   padding: 16px 0;
+}
+
+/* Keep brand from squishing */
+.brand{ white-space: nowrap; }
+
+/* Nav stays centered and can shrink */
+nav{
+  display:flex;
+  justify-content:center;
+  gap: 10px;
+  align-items:center;
+  color: rgba(14,15,18,.60);
+  font-size: 13px;
+  min-width: 0; /* allows shrink */
+}
+
+/* Nav links don’t wrap */
+nav a{ white-space: nowrap; }
+
 }
 
 /* LOGO: no dot, match section header vibe */
@@ -144,7 +163,30 @@ nav a:hover{
   display:flex;
   gap: 10px;
   align-items:center;
-  margin-left: 6px;
+  justify-content:flex-end;
+  white-space: nowrap;
+}
+
+/* Header buttons smaller + consistent */
+.headerCtas .btn{
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+/* Prevent buttons from stretching weirdly */
+.headerCtas .btn .arrow{
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile: hide nav links, keep CTAs visible */
+@media (max-width: 920px){
+  nav{
+    display:none;
+  }
+  .topbar{
+    grid-template-columns: auto auto; /* logo | CTAs */
+  }
 }
 
 /* Make header buttons slightly smaller than main buttons */
