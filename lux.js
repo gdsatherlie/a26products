@@ -1,13 +1,10 @@
 const CALENDLY_URL = "https://calendly.com/a26companies/15min";
 
-/**
- * Intersection-based reveals:
- * - Any element with .reveal will animate in.
- * - Any element with .stagger will animate its children in sequence.
- */
+/* =========================
+   REVEALS
+========================= */
 function initReveals() {
   const els = document.querySelectorAll(".reveal, .stagger");
-
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       if (e.isIntersecting) {
@@ -20,10 +17,9 @@ function initReveals() {
   els.forEach(el => io.observe(el));
 }
 
-/**
- * Subtle parallax for “hero cards” or background bits.
- * Add data-parallax="0.06" (smaller = subtler).
- */
+/* =========================
+   PARALLAX
+========================= */
 function initParallax() {
   const par = document.querySelectorAll("[data-parallax]");
   if (!par.length) return;
@@ -32,7 +28,6 @@ function initParallax() {
     const y = window.scrollY || 0;
     par.forEach((el) => {
       const spd = parseFloat(el.getAttribute("data-parallax") || "0.06");
-      // Negative so it floats upward slightly as you scroll down
       el.style.transform = `translateY(${y * spd * -1}px)`;
     });
   };
@@ -41,10 +36,9 @@ function initParallax() {
   onScroll();
 }
 
-/**
- * Forces all Calendly CTAs to be absolute + consistent.
- * Any <a data-calendly> will open CALENDLY_URL in a new tab.
- */
+/* =========================
+   CALENDLY
+========================= */
 function bindCalendlyLinks() {
   document.querySelectorAll("[data-calendly]").forEach((a) => {
     a.setAttribute("href", CALENDLY_URL);
@@ -53,20 +47,16 @@ function bindCalendlyLinks() {
   });
 }
 
-/**
- * Keeps your Formspree submit -> redirect to Calendly flow.
- * Also fires GA event intake_submit (safe if GA isn't loaded).
- */
+/* =========================
+   INTAKE FORM
+========================= */
 function bindIntakeForm() {
   const form = document.getElementById("intakeForm");
   if (!form) return;
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const formData = new FormData(form);
-
-    // Honeypot spam trap
     if (formData.get("_gotcha")) return;
 
     try {
@@ -88,72 +78,62 @@ function bindIntakeForm() {
       }
 
       alert("Submission failed. Please try again or email products@a26cos.com.");
-    } catch (err) {
+    } catch {
       alert("Network error. Please email products@a26cos.com.");
     }
   });
 }
 
-/**
- * Mobile dropdown menu:
- * - Hamburger button: .mobile-menu-toggle
- * - Menu container: #mobile-menu (also has class .mobile-menu)
- * - Shows/hides by toggling .is-open
- */
+/* =========================
+   MOBILE MENU (FIXED)
+========================= */
 function initMobileMenu() {
   const btn = document.querySelector(".mobile-menu-toggle");
-  const menu = document.getElementById("mobile-menu");
-  if (!btn || !menu) return;
-
-  const close = () => {
-    menu.classList.remove("is-open");
-    btn.setAttribute("aria-expanded", "false");
-  };
+  if (!btn) return;
 
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
+
+    // ALWAYS re-find the menu next to the header
+    const menu = document.querySelector("header + .mobile-menu");
+    if (!menu) return;
+
     const open = menu.classList.toggle("is-open");
     btn.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
-  // Close when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!menu.classList.contains("is-open")) return;
-    if (menu.contains(e.target) || btn.contains(e.target)) return;
-    close();
+  // Close on outside click
+  document.addEventListener("click", () => {
+    const menu = document.querySelector("header + .mobile-menu");
+    if (!menu) return;
+    menu.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
   });
 
-  // Close on Escape
+  // Close on ESC
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") close();
-  });
-
-  // Close after clicking a menu link
-  menu.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => close());
+    if (e.key !== "Escape") return;
+    const menu = document.querySelector("header + .mobile-menu");
+    if (!menu) return;
+    menu.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
   });
 }
 
-/**
- * Page transitions (fade-out -> navigate) for internal HTML pages.
- * Add data-nav to links like: <a data-nav href="./services.html">Services</a>
- */
+/* =========================
+   PAGE TRANSITIONS
+========================= */
 function initPageTransitions() {
   const overlay = document.querySelector(".pageFade");
   if (!overlay) return;
 
-  // Start with overlay on in HTML; remove on load for fade-in
   requestAnimationFrame(() => overlay.classList.remove("on"));
 
   document.querySelectorAll("a[data-nav]").forEach((a) => {
     a.addEventListener("click", (e) => {
       const href = a.getAttribute("href");
-      if (!href) return;
-
-      // Only handle same-folder html pages
-      const isInternalHtml = !href.startsWith("http") && href.endsWith(".html");
-      if (!isInternalHtml) return;
+      if (!href || href.startsWith("http") || !href.endsWith(".html")) return;
 
       e.preventDefault();
       overlay.classList.add("on");
@@ -167,11 +147,14 @@ function setYear() {
   if (y) y.textContent = new Date().getFullYear();
 }
 
+/* =========================
+   INIT
+========================= */
 document.addEventListener("DOMContentLoaded", () => {
   setYear();
   bindCalendlyLinks();
   bindIntakeForm();
-  initMobileMenu();     // <-- ADDED
+  initMobileMenu();
   initReveals();
   initParallax();
   initPageTransitions();
