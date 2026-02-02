@@ -954,4 +954,47 @@ header .topbar { position: relative; }
     border-radius:2px !important;
   }
 }
+/* ===== Mobile hamburger: 3 thick black lines, no circle ===== */
+@media (max-width: 768px) {
+  /* ensure header row layout pushes button to the right */
+  header .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* hide desktop nav + desktop CTAs on mobile */
+  header .desktop-nav,
+  header .headerCtas { display: none !important; }
+
+  /* show hamburger on mobile */
+  header .mobile-menu-toggle {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    gap: 6px !important;
+
+    width: 34px !important;
+    height: 28px !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+
+  /* the 3 lines */
+  header .mobile-menu-toggle .line {
+    display: block !important;
+    width: 34px !important;
+    height: 4px !important;
+    background: #000 !important;
+    border-radius: 2px !important;
+  }
+}
 
