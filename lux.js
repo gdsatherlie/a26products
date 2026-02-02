@@ -95,6 +95,47 @@ function bindIntakeForm() {
 }
 
 /**
+ * Mobile dropdown menu:
+ * - Hamburger button: .mobile-menu-toggle
+ * - Menu container: #mobile-menu (also has class .mobile-menu)
+ * - Shows/hides by toggling .is-open
+ */
+function initMobileMenu() {
+  const btn = document.querySelector(".mobile-menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+  if (!btn || !menu) return;
+
+  const close = () => {
+    menu.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+  };
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const open = menu.classList.toggle("is-open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!menu.classList.contains("is-open")) return;
+    if (menu.contains(e.target) || btn.contains(e.target)) return;
+    close();
+  });
+
+  // Close on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+
+  // Close after clicking a menu link
+  menu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => close());
+  });
+}
+
+/**
  * Page transitions (fade-out -> navigate) for internal HTML pages.
  * Add data-nav to links like: <a data-nav href="./services.html">Services</a>
  */
@@ -130,6 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setYear();
   bindCalendlyLinks();
   bindIntakeForm();
+  initMobileMenu();     // <-- ADDED
   initReveals();
   initParallax();
   initPageTransitions();
