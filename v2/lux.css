@@ -123,14 +123,19 @@ nav a{ white-space: nowrap; }
 
 /* LOGO: no dot, match section header vibe */
 .brand{
-  font-family: "Space Grotesk", Inter, system-ui;
-  font-size: 16px;           /* same “weight” as section headers */
-  letter-spacing: .12em;
+  margin:0;
+  font-family: "Space Grotesk", "Inter", system-ui;
+  font-size: 13px;              /* subheader size */
+  letter-spacing: 0.10em;
   text-transform: uppercase;
-  font-weight: 800;          /* slightly bolder */
-  color: rgba(14,15,18,.92);
+  color: rgba(14,15,18,.86);
+  font-weight: 700;             /* a touch bolder */
+  white-space: nowrap;
 }
-.brand .aLower{ text-transform:none; }
+.brand .aLower{
+  text-transform: none;         /* keep lowercase a */
+  letter-spacing: 0.10em;
+}
 
 nav{
   display:flex;
