@@ -108,17 +108,24 @@ header{
 /* Nav stays centered and can shrink */
 nav{
   display:flex;
-  justify-content:center;
-  gap: 10px;
+  justify-content:flex-end; /* push links to the right */
+  gap: 14px;
   align-items:center;
   color: rgba(14,15,18,.60);
   font-size: 13px;
-  min-width: 0; /* allows shrink */
+  min-width: 0;
 }
 
-/* Nav links don’t wrap */
-nav a{ white-space: nowrap; }
+nav a{
+  white-space: nowrap;
+  padding: 8px 10px;
+  border-radius: 999px;
+  transition: background .12s ease, color .12s ease;
+}
 
+nav a:hover{
+  background: rgba(14,15,18,.06);
+  color: rgba(14,15,18,.84);
 }
 
 /* LOGO: no dot, match section header vibe */
