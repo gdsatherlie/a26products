@@ -31,19 +31,21 @@
   <div class="bgWash"></div>
   <div class="grain"></div>
 
-  <header>
+<header>
   <div class="container">
     <div class="topbar">
       <a class="brand" href="./preview.html">
         <span class="aLower">a</span>26 PRODUCTS
       </a>
 
-      <nav>
+      <!-- Desktop nav (shown on desktop, hidden on mobile via CSS) -->
+      <nav class="desktop-nav">
         <a data-nav href="./about.html">About</a>
         <a data-nav href="./services.html">Services</a>
       </nav>
 
-      <div class="headerCtas">
+      <!-- Desktop CTAs (shown on desktop, hidden on mobile via CSS) -->
+      <div class="headerCtas header-cta">
         <a class="btn ghost" href="#intake">Start intake</a>
 
         <a class="btn primary" data-calendly href="#"
@@ -51,9 +53,20 @@
           Book a call <span class="arrow">↗</span>
         </a>
       </div>
+
+      <!-- Mobile-only hamburger -->
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">☰</button>
     </div>
   </div>
 </header>
+
+<!-- Mobile-only dropdown (place immediately after </header>) -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="./about.html">About</a>
+  <a href="./services.html">Services</a>
+  <a href="#intake">Start intake</a>
+  <a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Book a call</a>
+</div>
 
 
   <main class="container">
@@ -368,3 +381,4 @@
   <script src="./lux.js"></script>
 </body>
 </html>
+
