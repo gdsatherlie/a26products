@@ -486,13 +486,7 @@ input:focus,textarea:focus,select:focus{
    ================================ */
 
 /* Works if you have <header> ... <nav> ... buttons inside */
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  padding:16px 22px;
-}
+
 
 /* Space between About / Services links */
 header nav{
@@ -509,4 +503,58 @@ header .buttons{
   align-items:center;
   gap:12px;
   margin-left:auto;
+}
+
+/* ================================
+   TOP NAVBAR ALIGNMENT FIX
+   Logo left, everything else right
+   ================================ */
+
+/* This targets common header wrappers */
+.site-header,
+.topbar,
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 22px;
+  width:100%;
+}
+
+/* Logo / brand stays left */
+.site-header .brand,
+.site-header .logo,
+.topbar .brand,
+.topbar .logo,
+.header .brand,
+.header .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:0 0 auto;
+}
+
+/* Nav + buttons grouped right */
+.site-header nav,
+.topbar nav,
+.header nav{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-left:auto;  /* pushes nav to the right */
+}
+
+/* If buttons are in a wrapper, keep them right & spaced */
+.site-header .actions,
+.topbar .actions,
+.header .actions,
+.site-header .cta,
+.topbar .cta,
+.header .cta,
+.site-header .buttons,
+.topbar .buttons,
+.header .buttons{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
