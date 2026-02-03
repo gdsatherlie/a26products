@@ -100,7 +100,7 @@ header{
   left: 0;
   right: 0;
   z-index: 80;
-  background: rgba(251,251,250,.78);
+  background: transparent;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(14,15,18,.08);
