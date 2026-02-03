@@ -56,7 +56,7 @@ a{ color:inherit; text-decoration:none; }
   background:
     radial-gradient(900px 520px at 12% 8%, rgba(183,154,91,.10), transparent 60%),
     radial-gradient(850px 520px at 88% 14%, rgba(14,15,18,.06), transparent 60%),
-        linear-gradient(180deg, #f3f0e9, #eee9e0 55%, #f3f0e9);
+    linear-gradient(180deg, #fbfbfa, #f6f6f4 55%, #fbfbfa);
 }
 
 .grain{
@@ -1185,3 +1185,13 @@ header .topbar { position: relative; }
 
 /* Ensure all pages share the same base background */
 html, body { background: #fff !important; }
+
+
+/* Kill any page-wide overlay that can create a pale band at top */
+body::before, body::after,
+main::before, main::after,
+.container::before, .container::after {
+  content: none !important;
+  display: none !important;
+}
+
