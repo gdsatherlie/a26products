@@ -1147,4 +1147,12 @@ header .topbar { position: relative; }
   margin-top: 0 !important;
 }
 
+/* Marquee: create space between TOP divider line and pills */
+.marquee { position: relative !important; }
+
+.marquee .track{
+  position: relative !important;   /* overrides absolute/top positioning */
+  top: 12px !important;            /* pushes pills down away from top line */
+  padding-bottom: 12px !important; /* keeps bottom spacing balanced */
+}
 
