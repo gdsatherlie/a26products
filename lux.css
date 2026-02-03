@@ -1195,3 +1195,7 @@ main::before, main::after,
   display: none !important;
 }
 
+/* Fix: remove white “pad” area behind header, keep header itself white */
+body { padding-top: 0 !important; }
+main.container { padding-top: 74px !important; }
+
