@@ -1123,4 +1123,16 @@ header .topbar { position: relative; }
   display: none !important;
 }
 
+/* Add equal breathing room between marquee pills and divider lines */
+.marquee{
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+/* If the track has its own padding, keep it neutral */
+.marquee .track{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 
