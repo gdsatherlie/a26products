@@ -1095,5 +1095,32 @@ header .topbar { position: relative; }
   display: none !important;
 }
 
+/* === Tighten space above/below the marquee block === */
+.marquee{
+  margin: 6px 0 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.marquee .track{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* If lux.css uses divider lines via borders/pseudo elements, remove them */
+.marquee,
+.marquee .track{
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.marquee::before,
+.marquee::after,
+.marquee .track::before,
+.marquee .track::after{
+  content: none !important;
+  display: none !important;
+}
 
 
