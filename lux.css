@@ -1071,4 +1071,29 @@ header .topbar { position: relative; }
 }
 .marquee { margin-top: 6px !important; }
 
+/* Tighten the marquee block spacing (remove the big dead area) */
+.marquee{
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* The empty space is coming from the track wrapper */
+.marquee .track{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1 !important;
+}
+
+/* Remove the extra horizontal divider lines around the marquee (if present) */
+.marquee::before,
+.marquee::after{
+  content: none !important;
+  display: none !important;
+}
+
+
 
