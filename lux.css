@@ -1064,3 +1064,11 @@ header .topbar { position: relative; }
   }
 }
 
+/* tighten spacing above the marquee */
+.marquee { 
+  margin-top: 10px !important; 
+  padding-top: 0 !important; 
+}
+.marquee { margin-top: 6px !important; }
+
+
