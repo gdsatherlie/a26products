@@ -1135,4 +1135,16 @@ header .topbar { position: relative; }
   padding-bottom: 0 !important;
 }
 
+/* Add space BETWEEN the top divider line (on .track) and the pills */
+.marquee .track{
+  padding-top: 14px !important;   /* creates space below the top line */
+  padding-bottom: 14px !important;/* creates space above the bottom line */
+  box-sizing: border-box !important;
+}
+
+/* Safety: ensure pills aren't collapsing upward */
+.marquee .pill2{
+  margin-top: 0 !important;
+}
+
 
