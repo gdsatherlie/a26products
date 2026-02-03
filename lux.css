@@ -1172,3 +1172,5 @@ header .topbar { position: relative; }
   display: none !important;
 }
 
+/* Ensure all pages share the same base background */
+html, body { background: #fff !important; }
