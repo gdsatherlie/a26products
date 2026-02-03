@@ -1156,3 +1156,19 @@ header .topbar { position: relative; }
   padding-bottom: 12px !important; /* keeps bottom spacing balanced */
 }
 
+/* Remove marquee divider lines (top + bottom) */
+.marquee,
+.marquee .track{
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.marquee::before,
+.marquee::after,
+.marquee .track::before,
+.marquee .track::after{
+  content: none !important;
+  display: none !important;
+}
+
