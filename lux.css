@@ -1201,3 +1201,18 @@ main.container { padding-top: 74px !important; }
 
 /* Let bgWash be the true background */
 body { background: transparent !important; }
+
+/* Enlarge a26 PRODUCTS logo */
+.brand{
+  font-size: 18px;   /* was ~14–15px */
+  letter-spacing: .14em;
+}
+.brand{
+  font-weight: 700;
+}
+@media (max-width: 768px){
+  .brand{
+    font-size: 16px;
+  }
+}
+
