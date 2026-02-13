@@ -1279,3 +1279,35 @@ body { background: transparent !important; }
   font-size: 13px;
   opacity: .7;
 }
+/* --- GEO FOOTPRINT (About hero) --- */
+.geo-line{
+  margin-top: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+
+.geo-label{
+  font-size: 12px !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+  opacity: .65 !important;
+}
+
+.geo-list{
+  display: inline-block !important;
+  font-size: 13px !important;
+  letter-spacing: .02em !important;
+  opacity: .82 !important;
+  padding: 8px 10px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+  background: rgba(255,255,255,.60) !important;
+}
+
+.geo-note{
+  margin-top: 10px !important;
+  font-size: 13px !important;
+  opacity: .7 !important;
+}
