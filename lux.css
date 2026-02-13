@@ -1247,3 +1247,35 @@ body { background: transparent !important; }
   border-radius: 10px;
   z-index: -1;
 }
+/* About hero footprint line (keeps countries out of H1) */
+.geo-line{
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.geo-label{
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .65;
+}
+
+.geo-list{
+  font-size: 13px;
+  letter-spacing: .02em;
+  opacity: .8;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(255,255,255,.45);
+  backdrop-filter: blur(6px);
+}
+
+.geo-note{
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: .7;
+}
