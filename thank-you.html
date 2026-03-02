@@ -3,118 +3,82 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="robots" content="noindex,nofollow" />
-  <title>Thank you — a26 Products</title>
+  <title>Thank You | Intake Received | A26 Products</title>
+  <meta name="description" content="Your intake has been received. Review the next steps and book a call with A26 Products." />
+  <link rel="canonical" href="https://www.a26products.com/thank-you.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Thank You | A26 Products" />
+  <meta property="og:description" content="We received your intake. Next steps are outlined on this page." />
+  <meta property="og:url" content="https://www.a26products.com/thank-you.html" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <!-- Auto-redirect to Calendly after 4 seconds -->
-  <meta http-equiv="refresh" content="4;url=https://calendly.com/a26companies/15min" />
-
-  <!-- OPTIONAL: If your site has a favicon -->
-  <link rel="icon" type="image/png" href="/favicon.png" />
-
-  <!-- OPTIONAL: If your site uses your existing CSS -->
-  <link rel="stylesheet" href="/lux.css" />
-
-  <!-- =========================
-       GOOGLE TAG (gtag.js)
-       Replace G-XXXXXXXXXX with your real GA4 Measurement ID
-       (You already mentioned: G-WVWP0EBRBC)
-  ========================== -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVWP0EBRBC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', 'G-WVWP0EBRBC');
   </script>
 
-  <!-- =========================
-       GOOGLE ADS CONVERSION EVENT (PLACEHOLDER)
-       After you create the conversion in Google Ads, it will give you:
-       - AW-CONVERSION_ID
-       - conversion_label
-       Paste those into the snippet below.
-       
-       EXAMPLE ONLY (do not leave placeholders):
-       gtag('config','AW-123456789');
-       gtag('event','conversion',{'send_to':'AW-123456789/AbCdEfGhIjKlMnOpQr'});
-  ========================== -->
-  <script>
-    // 1) Add your Google Ads base config line (AW-XXXXXXX)
-    // gtag('config', 'AW-XXXXXXXXXX');
-
-    // 2) Fire the conversion on page load
-    // gtag('event', 'conversion', {
-    //   'send_to': 'AW-XXXXXXXXXX/XXXXXXXXXXXXXXX'
-    // });
-  </script>
-
-  <style>
-    /* Simple, clean fallback styling if your lux.css doesn't load */
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:#fff;
-      color:#111;
-    }
-    .wrap{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
-      box-sizing:border-box;
-    }
-    .card{
-      max-width:720px;
-      width:100%;
-      border:1px solid rgba(0,0,0,.08);
-      border-radius:16px;
-      padding:28px;
-      box-shadow:0 8px 30px rgba(0,0,0,.06);
-    }
-    h1{margin:0 0 10px 0; font-size:28px; line-height:1.2;}
-    p{margin:0 0 14px 0; font-size:16px; line-height:1.5; color:rgba(0,0,0,.78);}
-    .small{font-size:13px; color:rgba(0,0,0,.6);}
-    a{color:#0b57d0;}
-    .btn{
-      display:inline-block;
-      margin-top:10px;
-      padding:12px 14px;
-      border-radius:12px;
-      background:#111;
-      color:#fff;
-      text-decoration:none;
-      font-weight:600;
-    }
-    .btn:hover{opacity:.9;}
-  </style>
+  <link rel="stylesheet" href="/lux.css?v=inst-seo-20260302" />
 </head>
-
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Thanks — we got your request.</h1>
-      <p>You’ll be redirected to book a quick 15-minute call in a moment.</p>
-      <p class="small">
-        If you’d rather not book right now, no problem — we’ll follow up by email using the details you submitted.
-      </p>
-
-      <a class="btn" href="https://calendly.com/a26companies/15min">Book the 15-min call</a>
-
-      <p class="small" style="margin-top:14px;">
-        Not redirecting? Use this link:
-        <a href="https://calendly.com/a26companies/15min">https://calendly.com/a26companies/15min</a>
-      </p>
+  <header class="siteHeader">
+    <div class="container topbar">
+      <a class="brand" href="/index.html">A26 PRODUCTS</a>
+      <nav class="desktopNav" aria-label="Primary">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/services.html">Services</a>
+      </nav>
+      <div class="headerCtas">
+        <a class="btn ghost" href="/index.html#intake">Start intake</a>
+        <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
+      </div>
+      <button class="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
+    <div class="mobileMenu" id="mobileMenu">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/index.html#intake">Start intake</a>
+      <a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
+    </div>
+  </header>
 
-  <!-- OPTIONAL: If you want a JS redirect instead of meta refresh, uncomment below
-  <script>
-    setTimeout(function () {
-      window.location.href = "https://calendly.com/a26companies/15min";
-    }, 4000);
-  </script>
-  -->
+  <main>
+    <section class="section hero">
+      <div class="container">
+        <div class="panel reading">
+          <p class="kicker">INTAKE CONFIRMATION</p>
+          <h1 class="h1">Thank you. We received your submission.</h1>
+          <p class="p">Your intake is now in review.</p>
+          <h2 class="h2">What happens next</h2>
+          <ol class="ol">
+            <li>We review your scope, category, and target quantity to identify core execution requirements.</li>
+            <li>We prepare a short recommendation on likely supplier path, governance priorities, and immediate risk checks.</li>
+            <li>We follow up with next-step options and can align on a call if needed.</li>
+          </ol>
+          <div class="actions">
+            <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
+            <a class="btn ghost" href="/index.html">Back to home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footerRow">
+      <p>© <span data-year></span> A26 Products</p>
+      <p><a href="/index.html">Home</a> · <a href="/about.html">About</a> · <a href="/services.html">Services</a></p>
+    </div>
+  </footer>
+
+  <script src="/lux.js"></script>
 </body>
 </html>
