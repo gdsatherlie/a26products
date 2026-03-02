@@ -1,310 +1,129 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="/favicon.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>a26 Products</title>
-  <meta name="description" content="Cross-border manufacturing, structured and controlled. Supplier selection, sampling/tooling, production oversight, and QC release across Asia and North America." />
+  <title>A26 Products</title>
+  <meta name="description" content="Cross-border manufacturing, structured and controlled." />
+  <link rel="icon" type="image/png" href="/favicon.png">
 
-  <!-- Keep your analytics tags here (GA/GTM/etc). Do NOT remove. -->
+  <!-- FORCE root-level CSS load -->
+  <link rel="stylesheet" href="/lux.css?v=force1">
 
-  <!-- Your other CSS can stay, but lux.css MUST be last -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="site.css">
-  <link rel="stylesheet" href="lux.css?v=inst2">
+  <!-- Emergency fallback styling (prevents Times New Roman disaster) -->
+  <style>
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background:#0b1220;
+      color:#fff;
+      margin:0;
+      padding:40px 20px;
+    }
+    a { color:#7dd3fc; }
+  </style>
 </head>
 
 <body>
-  <!-- Background wash (modern institutional) -->
-  <div class="bgWash" aria-hidden="true"></div>
 
-  <header>
-    <div class="container topbar">
-      <a class="brand" href="/index.html">A26 PRODUCTS</a>
-
-      <nav class="desktop-nav">
-        <a href="/about.html">About</a>
-        <a href="/services.html">Services</a>
-      </nav>
-
-      <div class="headerCtas">
-        <a class="btn ghost" href="#intake">Start intake</a>
-        <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">
-          Request a call <span class="arrow">↗</span>
-        </a>
-      </div>
-
-      <button class="mobile-menu-toggle" aria-label="Open menu">
-        <span class="line"></span><span class="line"></span><span class="line"></span>
-      </button>
-
-      <div class="mobile-menu" aria-label="Mobile menu">
-        <a href="/about.html">About</a>
-        <a href="/services.html">Services</a>
-        <a href="#intake">Start intake</a>
-        <a class="last" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
+  <header style="margin-bottom:60px;">
+    <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-weight:800;letter-spacing:.15em;font-size:13px;">A26 PRODUCTS</div>
+      <div>
+        <a href="/about.html" style="margin-right:20px;">About</a>
+        <a href="/services.html" style="margin-right:20px;">Services</a>
+        <a href="https://calendly.com/a26companies/15min" target="_blank">Request a call</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <div class="kicker">PRODUCTION EXECUTION PARTNER</div>
-        <h1 class="h1">Overseas manufacturing, without guesswork.</h1>
-        <p class="lede">
-          We run supplier selection, sampling/tooling, production oversight, and QC across Asia and North America.
-          One accountable partner. Clear milestones. Documented decisions.
-        </p>
+  <main style="max-width:1100px;margin:0 auto;">
 
-        <div class="ctaRow" style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">
-            Request initial review <span class="arrow">↗</span>
-          </a>
-          <a class="btn" href="#intake">Start intake</a>
-        </div>
+    <div style="margin-bottom:80px;">
+      <div style="letter-spacing:.25em;font-size:12px;opacity:.6;margin-bottom:14px;">
+        PRODUCTION EXECUTION PARTNER
+      </div>
 
-        <!-- Institutional “frame” (replaces cards/pills) -->
-        <div class="frame">
-          <div class="row">
-            <div class="cell">
-              <div class="label">What we do</div>
-              <div class="value">Sourcing + execution: factory validation, sampling, tooling, production management, QC release.</div>
-            </div>
-            <div class="cell">
-              <div class="label">What this is not</div>
-              <div class="value">Not a directory. Not introductions. Not “good luck from here.”</div>
-            </div>
-            <div class="cell">
-              <div class="label">Footprint</div>
-              <div class="value">China · Vietnam · Taiwan · India · USA (select partners)</div>
-            </div>
-            <div class="cell">
-              <div class="label">Financing</div>
-              <div class="value">Working-capital support may be available for qualified runs after scoping.</div>
-            </div>
-          </div>
-        </div>
+      <h1 style="font-size:56px;line-height:1.05;margin:0 0 20px 0;">
+        Overseas manufacturing, without guesswork.
+      </h1>
 
-        <!-- Process panel -->
-        <div class="panel">
-          <div class="h2">How it runs</div>
+      <p style="max-width:750px;font-size:18px;opacity:.75;">
+        We run supplier selection, sampling/tooling, production oversight, and QC across Asia and North America.
+        One accountable partner. Clear milestones. Documented decisions.
+      </p>
 
-          <div class="process">
-            <div class="step">
-              <div class="stepNum">01</div>
-              <div>
-                <div class="stepTitle">Assessment + commercial reality</div>
-                <div class="stepMeta">Specs, target costs, MOQ/lead time constraints, compliance, and a clear plan before spend.</div>
-              </div>
-            </div>
+      <div style="margin-top:24px;">
+        <a href="https://calendly.com/a26companies/15min" target="_blank"
+           style="background:#7dd3fc;color:#0b1220;padding:12px 20px;border-radius:30px;font-weight:700;margin-right:12px;text-decoration:none;">
+           Request initial review
+        </a>
 
-            <div class="step">
-              <div class="stepNum">02</div>
-              <div>
-                <div class="stepTitle">Factory validation + shortlist</div>
-                <div class="stepMeta">Capability, capacity, and quality alignment. The right factory for the actual job.</div>
-              </div>
-            </div>
+        <a href="#intake"
+           style="border:1px solid rgba(255,255,255,.3);padding:12px 20px;border-radius:30px;text-decoration:none;">
+           Start intake
+        </a>
+      </div>
+    </div>
 
-            <div class="step">
-              <div class="stepNum">03</div>
-              <div>
-                <div class="stepTitle">Sampling + tooling oversight</div>
-                <div class="stepMeta">Iterate efficiently. Document decisions. Lock the build before scale.</div>
-              </div>
-            </div>
+    <hr style="border:none;height:1px;background:rgba(255,255,255,.15);margin:60px 0;">
 
-            <div class="step">
-              <div class="stepNum">04</div>
-              <div>
-                <div class="stepTitle">Production management + QC release</div>
-                <div class="stepMeta">Milestones enforced. QC checkpoints. Shipment released with clarity.</div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section style="margin-bottom:80px;">
+      <h2 style="margin-bottom:20px;">How it runs</h2>
 
+      <div style="margin-bottom:20px;">
+        <strong>01 — Assessment + commercial reality</strong><br>
+        Specs, target costs, MOQ/lead time constraints, compliance, and a clear plan before spend.
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <strong>02 — Factory validation + shortlist</strong><br>
+        Capability, capacity, and quality alignment. The right factory for the actual job.
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <strong>03 — Sampling + tooling oversight</strong><br>
+        Iterate efficiently. Document decisions. Lock the build before scale.
+      </div>
+
+      <div>
+        <strong>04 — Production management + QC release</strong><br>
+        Milestones enforced. QC checkpoints. Shipment released with clarity.
       </div>
     </section>
 
-    <hr class="sep" />
+    <hr style="border:none;height:1px;background:rgba(255,255,255,.15);margin:60px 0;">
 
-    <!-- WHO IT'S FOR -->
-    <section>
-      <div class="container">
-        <div class="grid2">
-          <div class="panel">
-            <div class="h2">Who this is for</div>
-            <p class="p">
-              Founders and operators who need production handled with discipline—not managed loosely. If you’ve dealt with unclear specs,
-              missed timelines, or quality drift, this is designed to fix the system.
-            </p>
-            <div class="process">
-              <div class="step">
-                <div class="stepNum">—</div>
-                <div>
-                  <div class="stepTitle">Emerging brands</div>
-                  <div class="stepMeta">First serious production run, moving beyond marketplace sourcing into repeatable execution.</div>
-                </div>
-              </div>
-              <div class="step">
-                <div class="stepNum">—</div>
-                <div>
-                  <div class="stepTitle">Established operators</div>
-                  <div class="stepMeta">Supplier diversification, tighter unit economics, and stronger production controls at volume.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel">
-            <div class="h2">What you get</div>
-            <p class="p">
-              A single accountable partner across sourcing and production—with clear milestones and documentation that makes reorders easier.
-            </p>
-            <ul class="p" style="margin-top:12px; padding-left:18px; color: rgba(255,255,255,.72); line-height:1.8;">
-              <li>Validated factories (not a directory)</li>
-              <li>Sampling + tooling oversight</li>
-              <li>Production milestone control</li>
-              <li>QC checkpoints before shipment release</li>
-              <li>Process documentation for repeatability</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <section style="margin-bottom:80px;">
+      <h2>Footprint</h2>
+      <p style="opacity:.75;">
+        China · Vietnam · Taiwan · India · USA (select partners)
+      </p>
     </section>
 
-    <hr class="sep" />
+    <hr style="border:none;height:1px;background:rgba(255,255,255,.15);margin:60px 0;">
 
-    <!-- FAQ -->
-    <section>
-      <div class="container">
-        <div class="panel">
-          <div class="h2">FAQ</div>
-
-          <div class="process">
-            <div class="step">
-              <div class="stepNum">Q</div>
-              <div>
-                <div class="stepTitle">Do you take over factory communication?</div>
-                <div class="stepMeta">Yes. We manage coordination, milestones, and documentation so timelines stay enforceable.</div>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepNum">Q</div>
-              <div>
-                <div class="stepTitle">Can you help if we already have a factory?</div>
-                <div class="stepMeta">Yes. We can step in to improve controls, QC checkpoints, and reorder predictability.</div>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepNum">Q</div>
-              <div>
-                <div class="stepTitle">How quickly can we start?</div>
-                <div class="stepMeta">After intake, we can usually begin scoping immediately and align next steps within days.</div>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepNum">Q</div>
-              <div>
-                <div class="stepTitle">How do you define “predictable”?</div>
-                <div class="stepMeta">Spec lock, milestone gating, documented decisions, and QC release criteria before shipment.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="ctaRow" style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-            <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">
-              Request initial review <span class="arrow">↗</span>
-            </a>
-            <a class="btn" href="#intake">Start intake</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="sep" />
-
-    <!-- INTAKE -->
     <section id="intake">
-      <div class="container">
-        <div class="panel">
-          <div class="kicker">START INTAKE</div>
-          <div class="h2" style="margin-top:10px;">Tell us what you’re building.</div>
-          <p class="p">
-            Share the basics. We’ll respond with a clear path forward: scope, feasibility, and next steps.
-          </p>
+      <h2>Start intake</h2>
+      <p style="opacity:.75;">Tell us what you’re building. We’ll respond with next steps.</p>
 
-          <!-- If you already have an intake form with specific fields + JS, paste it here.
-               This is a clean default that routes to thank-you.html -->
-          <form action="/thank-you.html" method="GET">
-            <div class="formRow">
-              <div>
-                <label>Name</label>
-                <input name="name" required />
-              </div>
-              <div>
-                <label>Email</label>
-                <input name="email" type="email" required />
-              </div>
-            </div>
+      <form action="/thank-you.html" method="GET" style="margin-top:20px;">
+        <input name="name" placeholder="Name" required
+               style="display:block;width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:#111827;color:#fff;">
 
-            <div class="formRow">
-              <div>
-                <label>Product category</label>
-                <input name="category" placeholder="e.g., supplements, apparel, home goods" />
-              </div>
-              <div>
-                <label>Target first order quantity</label>
-                <input name="qty" placeholder="e.g., 1,000 units" />
-              </div>
-            </div>
+        <input name="email" type="email" placeholder="Email" required
+               style="display:block;width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:#111827;color:#fff;">
 
-            <div>
-              <label>What are you trying to manufacture?</label>
-              <textarea name="details" placeholder="Materials, dimensions, timeline, target landed cost, existing suppliers (if any)"></textarea>
-            </div>
+        <textarea name="details" placeholder="What are you trying to manufacture?"
+                  style="display:block;width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:#111827;color:#fff;"></textarea>
 
-            <button class="btn primary" type="submit">Submit intake</button>
-          </form>
-        </div>
-      </div>
+        <button type="submit"
+                style="background:#7dd3fc;color:#0b1220;padding:12px 20px;border:none;border-radius:30px;font-weight:700;">
+                Submit intake
+        </button>
+      </form>
     </section>
 
-    <footer>
-      <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-        <div>© <span id="y"></span> A26 Products</div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a href="/about.html">About</a>
-          <span style="opacity:.4;">·</span>
-          <a href="/services.html">Services</a>
-          <span style="opacity:.4;">·</span>
-          <a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
-        </div>
-      </div>
-    </footer>
   </main>
 
-  <script>
-    // year
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    // mobile menu toggle
-    const btn = document.querySelector(".mobile-menu-toggle");
-    const menu = document.querySelector(".mobile-menu");
-    if (btn && menu) {
-      btn.addEventListener("click", () => menu.classList.toggle("is-open"));
-      menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => menu.classList.remove("is-open")));
-      document.addEventListener("click", (e) => {
-        if (!menu.contains(e.target) && !btn.contains(e.target)) menu.classList.remove("is-open");
-      });
-    }
-  </script>
 </body>
 </html>
