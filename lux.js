@@ -5,8 +5,8 @@
   if (toggle && menu) {
     toggle.addEventListener('click', function (event) {
       event.stopPropagation();
-      var open = menu.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
+      var isOpen = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
     });
 
     document.addEventListener('click', function (event) {
@@ -24,7 +24,7 @@
     });
   }
 
-  document.querySelectorAll('[data-year]').forEach(function (node) {
-    node.textContent = String(new Date().getFullYear());
+  document.querySelectorAll('[data-year]').forEach(function (el) {
+    el.textContent = String(new Date().getFullYear());
   });
 })();
