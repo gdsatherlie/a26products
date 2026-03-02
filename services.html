@@ -1,17 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="/favicon.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>a26 Products — Services</title>
-  <meta name="description" content="Manufacturing sourcing + production management (China + Vietnam)." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="lux.css?v=inst-20260302">
+  <title>A26 Products | Services</title>
+  <meta name="description" content="Factory shortlisting, sampling and tooling oversight, and production management with QC release criteria." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVWP0EBRBC"></script>
@@ -22,168 +16,89 @@
     gtag('js', new Date());
     gtag('config', 'G-WVWP0EBRBC');
   </script>
-</head>
 
+  <link rel="stylesheet" href="/lux.css?v=inst-20260302" />
+</head>
 <body>
-  <header>
+  <header class="siteHeader">
     <div class="container topbar">
       <a class="brand" href="/index.html">A26 PRODUCTS</a>
-
-      <nav class="desktop-nav">
+      <nav class="desktopNav" aria-label="Primary">
+        <a href="/index.html">Home</a>
         <a href="/about.html">About</a>
         <a href="/services.html">Services</a>
       </nav>
-
       <div class="headerCtas">
         <a class="btn ghost" href="/index.html#intake">Start intake</a>
         <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
       </div>
-
-      <button class="mobile-menu-toggle" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('is-open')">
-        <span class="line"></span><span class="line"></span><span class="line"></span>
+      <button class="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
       </button>
-
-      <div class="mobile-menu">
-        <a href="/index.html">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/index.html#intake">Start intake</a>
-        <a class="last" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
-      </div>
+    </div>
+    <div class="mobileMenu" id="mobileMenu">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/index.html#intake">Start intake</a>
+      <a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="section hero">
       <div class="container">
-        <div class="kicker">SERVICES</div>
-        <h1 class="h1">Production execution, end-to-end.</h1>
-        <p class="lede">
-          Choose the engagement level that fits your stage. Every engagement includes commercial clarity, documentation, and milestone control.
-        </p>
+        <p class="kicker">SERVICES</p>
+        <h1 class="h1">Three engagement levels. One execution standard.</h1>
+        <p class="lede">Each engagement is built around milestone control, documented decisions, and accountable delivery. Scope expands as your program moves from supplier selection to production release.</p>
       </div>
     </section>
-
-    <div class="strip">
-      <div class="container">
-        <div class="stripRow">
-          <span>Supplier origination & validation</span>
-          <span>Sampling + tooling oversight</span>
-          <span>Production milestone control</span>
-          <span>QC release criteria</span>
-        </div>
-      </div>
-    </div>
 
     <section class="section">
       <div class="container">
-        <h2 class="h2">Engagement model</h2>
-        <p class="p">
-          We structure work around outcomes: validated supply, locked build, controlled production, and reliable reorders.
-        </p>
-
-        <div class="grid3" style="margin-top:18px;">
-          <div class="block">
-            <div class="h3">1) Factory shortlist + commercial model</div>
-            <p class="p">Define specs, target costs, MOQ/lead-time reality, and deliver a factory shortlist aligned to capability.</p>
-            <ul class="ul">
-              <li>Requirements + spec review</li>
-              <li>Commercial model (MOQ, tooling, lead times, landed cost)</li>
-              <li>Factory shortlist + recommendation</li>
-            </ul>
-          </div>
-
-          <div class="block">
-            <div class="h3">2) Sampling + tooling oversight</div>
-            <p class="p">Run the iteration loop and lock the build with documentation so production is not guesswork.</p>
-            <ul class="ul">
-              <li>Sampling plan + iteration management</li>
-              <li>Tooling execution and sign-off</li>
-              <li>Spec lock + decision log</li>
-            </ul>
-          </div>
-
-          <div class="block">
-            <div class="h3">3) Production management + QC release</div>
-            <p class="p">Milestone-based oversight with QC gates before release. Built for scale and repeatability.</p>
-            <ul class="ul">
-              <li>Milestones + production cadence</li>
-              <li>QC checkpoints and corrective actions</li>
-              <li>Shipment release criteria</li>
-            </ul>
-          </div>
+        <div class="panel">
+          <h2 class="h2">1) Factory shortlist + commercial model</h2>
+          <p class="p">Define requirements, evaluate factory fit, and produce a shortlist anchored in capability, MOQ, lead time, and landed-cost reality.</p>
+        </div>
+        <div class="panel">
+          <h2 class="h2">2) Sampling + tooling oversight</h2>
+          <p class="p">Run the iteration cycle, manage tooling readiness, and drive spec lock with documented approvals before scaling volume.</p>
+        </div>
+        <div class="panel">
+          <h2 class="h2">3) Production management + QC release</h2>
+          <p class="p">Operate to a milestone calendar, enforce QC checkpoints, and authorize shipment only when release criteria are met.</p>
         </div>
       </div>
     </section>
-
-    <hr/>
 
     <section class="section">
-      <div class="container">
-        <h2 class="h2">Typical outcomes</h2>
-        <div class="grid2" style="margin-top:18px;">
-          <div class="block">
-            <div class="h3">Fewer supplier surprises</div>
-            <p class="p">Validated capability, clearer timelines, fewer “we can do that” failures midstream.</p>
+      <div class="container twoCol">
+        <article class="panel">
+          <h2 class="h2">Typical outcomes</h2>
+          <p class="p">Reduced supplier variance through validation and controls.</p>
+          <p class="p">Faster sampling cycles with fewer decision resets.</p>
+          <p class="p">Improved production visibility at each milestone.</p>
+          <p class="p">Clearer QC release decisions before shipment.</p>
+        </article>
+        <article class="panel">
+          <h2 class="h2">Financing note</h2>
+          <p class="p">Working-capital support may be available after scope review and feasibility assessment. Availability is evaluated case by case and is not guaranteed.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
+            <a class="btn ghost" href="/index.html#intake">Start intake</a>
           </div>
-          <div class="block">
-            <div class="h3">Faster iteration</div>
-            <p class="p">A controlled sampling loop with documented decisions and fewer resets.</p>
-          </div>
-          <div class="block">
-            <div class="h3">Better reorder predictability</div>
-            <p class="p">Process documentation so reorders don’t feel like starting over.</p>
-          </div>
-          <div class="block">
-            <div class="h3">Quality gating before release</div>
-            <p class="p">QC criteria defined early and enforced before shipment leaves the line.</p>
-          </div>
-        </div>
-
-        <div class="heroActions" style="margin-top:22px;">
-          <a class="btn primary" href="/index.html#intake">Start intake</a>
-          <a class="btn" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
-        </div>
+        </article>
       </div>
     </section>
-
-    <hr/>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="h2">Financing</h2>
-        <p class="p">
-          Working-capital support may be available for qualified production runs. We’ll evaluate fit after scoping the product, suppliers, and timeline.
-        </p>
-
-        <div class="faq">
-          <div class="qa">
-            <b>What qualifies?</b>
-            <div class="meta">Clear specs, credible demand signals, viable unit economics, and a production plan we can underwrite.</div>
-          </div>
-          <div class="qa">
-            <b>Is financing guaranteed?</b>
-            <div class="meta">No. It depends on fit, feasibility, and underwriting criteria after initial review.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container footerRow">
-        <div>© <span id="y"></span> A26 Products</div>
-        <div>
-          <a href="/index.html">Home</a> · <a href="/about.html">About</a> ·
-          <a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
-        </div>
-      </div>
-    </footer>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    document.querySelectorAll(".mobile-menu a").forEach(a => {
-      a.addEventListener("click", () => document.querySelector(".mobile-menu").classList.remove("is-open"));
-    });
-  </script>
+  <footer>
+    <div class="container footerRow">
+      <p>© <span data-year></span> A26 Products</p>
+      <p><a href="/index.html">Home</a> · <a href="/about.html">About</a> · <a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a></p>
+    </div>
+  </footer>
+
+  <script src="/lux.js"></script>
 </body>
 </html>

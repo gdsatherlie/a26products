@@ -1,17 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="/favicon.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>a26 Products — About</title>
-  <meta name="description" content="a26 Products is an operator-led manufacturing partner focused on predictable execution." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="lux.css?v=inst-20260302">
+  <title>A26 Products | About</title>
+  <meta name="description" content="Institutional manufacturing execution built on milestone control, quality systems, and accountable delivery." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVWP0EBRBC"></script>
@@ -22,153 +16,88 @@
     gtag('js', new Date());
     gtag('config', 'G-WVWP0EBRBC');
   </script>
-</head>
 
+  <link rel="stylesheet" href="/lux.css?v=inst-20260302" />
+</head>
 <body>
-  <header>
+  <header class="siteHeader">
     <div class="container topbar">
       <a class="brand" href="/index.html">A26 PRODUCTS</a>
-
-      <nav class="desktop-nav">
+      <nav class="desktopNav" aria-label="Primary">
+        <a href="/index.html">Home</a>
         <a href="/about.html">About</a>
         <a href="/services.html">Services</a>
       </nav>
-
       <div class="headerCtas">
         <a class="btn ghost" href="/index.html#intake">Start intake</a>
         <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
       </div>
-
-      <button class="mobile-menu-toggle" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('is-open')">
-        <span class="line"></span><span class="line"></span><span class="line"></span>
+      <button class="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
       </button>
-
-      <div class="mobile-menu">
-        <a href="/index.html">Home</a>
-        <a href="/services.html">Services</a>
-        <a href="/index.html#intake">Start intake</a>
-        <a class="last" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
-      </div>
+    </div>
+    <div class="mobileMenu" id="mobileMenu">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/index.html#intake">Start intake</a>
+      <a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="section hero">
       <div class="container">
-        <div class="kicker">ABOUT</div>
-        <h1 class="h1">Operational control for cross-border production.</h1>
-        <p class="lede">
-          a26 Products exists to remove uncertainty from manufacturing. We run sourcing and production execution with clear milestones,
-          documented decisions, and quality gates—so founders and operators can scale without guesswork.
-        </p>
+        <p class="kicker">ABOUT</p>
+        <h1 class="h1">Execution discipline for cross-border manufacturing.</h1>
+        <p class="lede">A26 Products operates as an execution partner for teams that need predictable manufacturing outcomes. We treat production as an operating system: defined milestones, spec lock, supplier accountability, and QC release criteria.</p>
       </div>
     </section>
-
-    <div class="strip">
-      <div class="container">
-        <div class="stripRow">
-          <span>Process-led execution</span>
-          <span>Commercial modeling before spend</span>
-          <span>QC release criteria</span>
-          <span>Supplier accountability</span>
-        </div>
-      </div>
-    </div>
 
     <section class="section">
-      <div class="container">
-        <div class="grid2">
-          <div>
-            <h2 class="h2">What we believe</h2>
-
-            <div class="block">
-              <div class="h3">Predictability is engineered</div>
-              <p class="p">It comes from spec lock, milestone gates, and documented decisions—not optimism.</p>
-            </div>
-
-            <div class="block">
-              <div class="h3">Quality is a system</div>
-              <p class="p">QC is not a final checkbox. It’s checkpoints, release criteria, and enforcement.</p>
-            </div>
-
-            <div class="block">
-              <div class="h3">Accountability matters</div>
-              <p class="p">You should have one partner who owns the path from scope → sample → production → release.</p>
-            </div>
-          </div>
-
-          <div>
-            <h2 class="h2">Where we operate</h2>
-            <p class="p">China · Vietnam · Taiwan · India · United States (select partners)</p>
-
-            <div class="block">
-              <div class="h3">What this is not</div>
-              <p class="p">Not a directory. Not “here’s a factory link.” Not unmanaged handoffs.</p>
-            </div>
-
-            <div class="block">
-              <div class="h3">Who it’s for</div>
-              <p class="p">Founders scaling their first serious run, and operators tightening execution at volume.</p>
-            </div>
-          </div>
-        </div>
+      <div class="container threeCol">
+        <article class="panel">
+          <h2 class="h2">Predictability is engineered</h2>
+          <p class="p">Predictability comes from scoped requirements, realistic commercial assumptions, and milestone governance from first sample through release.</p>
+        </article>
+        <article class="panel">
+          <h2 class="h2">Quality is a system</h2>
+          <p class="p">Quality is managed through repeatable checkpoints, documented decisions, and release standards aligned with product risk.</p>
+        </article>
+        <article class="panel">
+          <h2 class="h2">Accountability matters</h2>
+          <p class="p">We provide a single accountable operating partner to coordinate supplier selection, production oversight, and escalation when issues emerge.</p>
+        </article>
       </div>
     </section>
-
-    <hr/>
 
     <section class="section">
-      <div class="container">
-        <h2 class="h2">How we work</h2>
-        <p class="p">We start with commercial reality, then build a controlled execution plan.</p>
-
-        <div class="steps">
-          <div class="step">
-            <div class="stepNum">01</div>
-            <div class="stepBody">
-              <b>Define success</b>
-              <div class="meta">Specs, target landed cost, compliance requirements, timeline.</div>
-            </div>
+      <div class="container twoCol">
+        <article class="panel">
+          <h2 class="h2">What we are</h2>
+          <p class="p">An operator-led manufacturing execution firm that runs sourcing, sampling, tooling, and production management with clear ownership.</p>
+          <h2 class="h2">What we are not</h2>
+          <p class="p">Not a factory directory and not a passive referral service. We stay in the workflow until milestones are met and release criteria are satisfied.</p>
+        </article>
+        <article class="panel">
+          <h2 class="h2">Footprint</h2>
+          <p class="p">China, Vietnam, Taiwan, India, and the USA through select partners aligned to capability and quality requirements.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
+            <a class="btn ghost" href="/index.html#intake">Start intake</a>
           </div>
-          <div class="step">
-            <div class="stepNum">02</div>
-            <div class="stepBody">
-              <b>Validate supply</b>
-              <div class="meta">Capability, capacity, and quality alignment before commitment.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="stepNum">03</div>
-            <div class="stepBody">
-              <b>Execute with gates</b>
-              <div class="meta">Sampling, tooling, and production milestones enforced; QC release criteria defined.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="heroActions" style="margin-top:18px;">
-          <a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
-          <a class="btn" href="/index.html#intake">Start intake</a>
-        </div>
+        </article>
       </div>
     </section>
-
-    <footer>
-      <div class="container footerRow">
-        <div>© <span id="y"></span> A26 Products</div>
-        <div>
-          <a href="/index.html">Home</a> · <a href="/services.html">Services</a> ·
-          <a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a>
-        </div>
-      </div>
-    </footer>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    document.querySelectorAll(".mobile-menu a").forEach(a => {
-      a.addEventListener("click", () => document.querySelector(".mobile-menu").classList.remove("is-open"));
-    });
-  </script>
+  <footer>
+    <div class="container footerRow">
+      <p>© <span data-year></span> A26 Products</p>
+      <p><a href="/index.html">Home</a> · <a href="/services.html">Services</a> · <a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a></p>
+    </div>
+  </footer>
+
+  <script src="/lux.js"></script>
 </body>
 </html>
