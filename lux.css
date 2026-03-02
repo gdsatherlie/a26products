@@ -1,28 +1,33 @@
+/* =========================================================
+   a26 PRODUCTS — INSTITUTIONAL STYLESHEET (FULL REPLACEMENT)
+   - Keeps your existing class hooks (no HTML rewrite needed)
+   - Removes "lux/glass/grain/pills" vibe completely
+   ========================================================= */
+
 :root{
-  /* Institutional-lux: calm, controlled */
-  --bg: #f5f5f3;
-  --paper: rgba(255,255,255,.78);
-  --paper2: rgba(255,255,255,.92);
+  --bg: #ffffff;
+  --paper: #ffffff;
+  --ink: #0b1220;
+  --muted: rgba(11,18,32,.68);
+  --muted2: rgba(11,18,32,.52);
 
-  --ink: #111111;
-  --muted: rgba(17,17,17,.66);
-  --muted2: rgba(17,17,17,.50);
+  --stroke: rgba(11,18,32,.12);
+  --stroke2: rgba(11,18,32,.18);
 
-  --stroke: rgba(17,17,17,.10);
-  --stroke2: rgba(17,17,17,.16);
+  --accent: #0f2a5f;      /* institutional navy */
+  --accent2: #0b234f;
 
-  /* Accent (quiet) */
-  --gold: #b79a5b;
+  --max: 1160px;
+  --r: 12px;
 
-  --max: 1200px;
-  --r: 18px; /* slightly tighter */
-  --shadow: 0 16px 40px rgba(0,0,0,.08); /* less “glossy” */
+  --shadow: 0 10px 30px rgba(11,18,32,.08);
+  --shadow2: 0 6px 18px rgba(11,18,32,.06);
 
   --s2: 16px;
   --s3: 26px;
   --s4: 44px;
   --s5: 72px;
-  --s6: 110px;
+  --s6: 104px;
 
   --ease: cubic-bezier(.2,.8,.2,1);
 }
@@ -30,132 +35,73 @@
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
 html{ scroll-behavior:smooth; }
-
 body{
   margin:0;
   background: var(--bg);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  line-height: 1.65;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  line-height: 1.55;
   letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   overflow-x:hidden;
-  padding-top: 74px; /* fixed header clearance */
+  padding-top: 76px; /* header space */
 }
 
 a{ color:inherit; text-decoration:none; }
 .container{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
-::selection{ background: rgba(183,154,91,.18); }
+::selection{ background: rgba(15,42,95,.14); }
 
-/* =========================
-   Background wash + grain
-   ========================= */
-.bgWash{
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background:
-    radial-gradient(900px 520px at 12% 8%, rgba(183,154,91,.08), transparent 60%),
-    radial-gradient(850px 520px at 88% 14%, rgba(17,17,17,.06), transparent 60%),
-    linear-gradient(180deg, #f5f5f3, #f5f5f3);
-}
+/* kill legacy background effects if still in DOM */
+.bgWash, .grain{ display:none !important; }
 
-.grain{
-  position: fixed;
-  inset:-40%;
-  z-index:-1;
-  pointer-events:none;
-  opacity:.09; /* calmer */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='190'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='190' height='190' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
-  mix-blend-mode: multiply;
-  transform: rotate(6deg);
-}
-
-/* =========================
-   Page fade overlay
-   ========================= */
-.pageFade{
-  position: fixed;
-  inset: 0;
-  background: #fbfbfa;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .35s var(--ease);
-  z-index: 9999;
-}
-.pageFade.on{
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* =========================
-   Header
-   ========================= */
+/* =========================================
+   Header / Nav (institutional bar)
+   ========================================= */
 header{
   position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 80;
-  background: rgba(245,245,243,.72);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(17,17,17,.08);
+  top:0; left:0; right:0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  border-bottom: 1px solid var(--stroke);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
-
 .topbar{
-  display:grid;
-  grid-template-columns: auto 1fr auto; /* logo | nav | CTAs */
+  display:flex;
   align-items:center;
-  gap: 14px;
+  justify-content: space-between;
+  gap: 16px;
   padding: 14px 0;
 }
 
-.brand{ 
-  white-space: nowrap;
+.brand{
   margin:0;
-  font-family: "Space Grotesk", Inter, system-ui;
-  font-size: 15px;
-  letter-spacing: 0.12em;
+  font-size: 13px;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  color: rgba(17,17,17,.88);
-  font-weight: 700;
-}
-.brand .aLower{
-  text-transform: none;
-  letter-spacing: 0.12em;
+  font-weight: 800;
+  color: rgba(11,18,32,.92);
+  white-space: nowrap;
 }
 
 nav{
   display:flex;
-  justify-content:flex-end;
-  gap: 10px;
   align-items:center;
-  color: rgba(17,17,17,.64);
+  gap: 10px;
+  color: rgba(11,18,32,.66);
   font-size: 13px;
-  min-width: 0;
 }
-
 nav a{
-  white-space: nowrap;
   padding: 8px 10px;
-  border-radius: 999px;
-  transition: background .15s ease, color .15s ease, transform .15s ease;
+  border-radius: 10px;
+  transition: background .12s ease, color .12s ease;
 }
 nav a:hover{
-  background: rgba(17,17,17,.04);
-  color: rgba(17,17,17,.86);
-  transform: translateY(-1px);
+  background: rgba(15,42,95,.06);
+  color: rgba(11,18,32,.92);
 }
 
-.navCta{
-  border: 1px solid rgba(17,17,17,.14);
-  background: rgba(255,255,255,.55);
-  color: rgba(17,17,17,.92);
-  font-weight: 800;
-}
-
-/* header CTAs */
 .headerCtas{
   display:flex;
   gap: 10px;
@@ -163,206 +109,106 @@ nav a:hover{
   justify-content:flex-end;
   white-space: nowrap;
 }
-.headerCtas .btn{
-  padding: 10px 12px;
-  font-size: 13px;
-}
-.headerCtas .btn .arrow{
-  width: 20px;
-  height: 20px;
-}
 
-/* =========================
-   Mobile header + menu
-   (single source of truth)
-   ========================= */
-.mobile-menu,
-.mobile-menu-toggle{ display:none; }
-
-@media (max-width: 920px){
-  nav{ display:none; }
-  .topbar{ grid-template-columns: auto 1fr auto; }
-}
-
-@media (max-width: 768px){
-  /* Keep fixed header, body already has padding-top */
-  header{
-    background: rgba(245,245,243,.92);
-  }
-
-  /* Hide desktop CTAs on mobile (your prior behavior) */
-  .headerCtas{ display:none; }
-
-  /* Hamburger */
-  .mobile-menu-toggle{
-    display:inline-flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 6px;
-    width: 34px;
-    height: 28px;
-    background: transparent;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    -webkit-appearance: none;
-    appearance: none;
-  }
-  .mobile-menu-toggle .line{
-    display:block;
-    width: 34px;
-    height: 4px;
-    background:#000;
-    border-radius: 2px;
-  }
-
-  /* Dropdown panel (hidden unless .is-open) */
-  .mobile-menu{
-    display:none;
-    position: fixed;
-    right: 16px;
-    top: 64px;
-    background: rgba(255,255,255,.92);
-    border: 1px solid rgba(0,0,0,0.10);
-    border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    z-index: 9999;
-    min-width: 220px;
-  }
-  .mobile-menu.is-open{ display:block; }
-  .mobile-menu a{
-    display:block;
-    padding: 10px 12px;
-    border-radius: 10px;
-    transition: background .12s ease, transform .12s ease;
-  }
-  .mobile-menu a:hover{
-    background: rgba(0,0,0,0.04);
-    transform: translateY(-1px);
-  }
-  /* make last CTA feel primary if you have it */
-  .mobile-menu a:last-child{
-    background:#111;
-    color:#fff;
-    font-weight:700;
-  }
-  .mobile-menu a:last-child:hover{ background:#000; }
-}
-
-/* =========================
-   Sections + Type
-   ========================= */
-section{ padding: var(--s6) 0; scroll-margin-top: 92px; }
-@media (max-width: 920px){ section{ padding: var(--s5) 0; } }
-
-.kicker{
-  color: rgba(17,17,17,.58);
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 12px;
-}
-
-.h1{
-  font-family: "Space Grotesk", Inter, system-ui;
-  font-weight: 650;
-  font-size: clamp(44px, 6vw, 84px);
-  line-height: 1.02;
-  letter-spacing: -0.05em;
-  margin: 14px 0 0;
-  max-width: 22ch;
-}
-
-.lede{
-  margin-top: 18px;
-  color: var(--muted);
-  font-size: 18px;
-  max-width: 78ch;
-}
-
-/* =========================
-   Buttons (keep tags/classes)
-   Make them feel less “pill toy”
-   ========================= */
-.ctaRow{ display:flex; flex-wrap:wrap; gap: 12px; margin-top: 22px; }
-
+/* =========================================
+   Buttons (rectangular, firm-like)
+   ========================================= */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap: 10px;
-  padding: 12px 16px;
-  border-radius: 12px; /* key change from 999px */
-  border: 1px solid rgba(17,17,17,.14);
-  background: rgba(255,255,255,.75);
-  color: rgba(17,17,17,.92);
-  font-weight: 800;
-  font-size: 14px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--stroke2);
+  background: #fff;
+  color: rgba(11,18,32,.92);
+  font-weight: 750;
+  font-size: 13px;
   cursor:pointer;
-  transition: transform .18s var(--ease), background .18s var(--ease), border-color .18s var(--ease);
-  will-change: transform;
+  box-shadow: none;
+  transition: background .12s ease, border-color .12s ease;
 }
 .btn:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,.92);
-  border-color: rgba(17,17,17,.22);
+  background: rgba(15,42,95,.04);
+  border-color: rgba(15,42,95,.24);
 }
 .btn.primary{
-  background: rgba(17,17,17,1);
-  color: #ffffff;
-  border-color: rgba(17,17,17,1);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
-.btn.primary:hover{ background: rgba(17,17,17,.92); }
-
-.btn.ghost{
-  background: transparent;
-  border-color: rgba(17,17,17,.16);
+.btn.primary:hover{
+  background: var(--accent2);
+  border-color: var(--accent2);
 }
 
 .arrow{
-  width: 22px; height: 22px;
+  width: 20px;
+  height: 20px;
+  display:grid;
+  place-items:center;
   border-radius: 999px;
-  display:grid; place-items:center;
-  background: rgba(255,255,255,.18);
-  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.26);
 }
 
-/* =========================
-   Hero layout
-   ========================= */
+/* =========================================
+   Sections / Typography (institutional)
+   ========================================= */
+section{ padding: var(--s6) 0; scroll-margin-top: 92px; }
+@media (max-width: 920px){ section{ padding: var(--s5) 0; } }
+
+.kicker{
+  color: rgba(11,18,32,.58);
+  letter-spacing: .20em;
+  text-transform: uppercase;
+  font-weight: 750;
+  font-size: 12px;
+}
+
+.h1{
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(42px, 5.2vw, 74px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  margin: 14px 0 0;
+  max-width: 24ch;
+}
+
+.lede{
+  margin-top: 16px;
+  color: rgba(11,18,32,.72);
+  font-size: 18px;
+  max-width: 78ch;
+}
+
+.ctaRow{ display:flex; flex-wrap:wrap; gap: 12px; margin-top: 20px; }
+
+/* =========================================
+   Hero layout (clean)
+   ========================================= */
 .heroGrid{
   margin-top: var(--s4);
   display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 14px;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 16px;
   align-items: stretch;
 }
 @media (max-width: 980px){ .heroGrid{ grid-template-columns: 1fr; } }
 
 .heroCard{
   border-radius: var(--r);
-  border: 1px solid rgba(17,17,17,.10);
-  background: rgba(255,255,255,.78);
+  border: 1px solid var(--stroke);
+  background: #fff;
   box-shadow: var(--shadow);
-  padding: 18px;
+  padding: 20px;
   position:relative;
   overflow:hidden;
 }
-.heroCard::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: radial-gradient(800px 420px at 20% 10%, rgba(183,154,91,.10), transparent 62%);
-  opacity: .45; /* less “gold glow” */
-  pointer-events:none;
-}
-.heroCard > *{ position:relative; z-index:1; }
 
-/* badges (keep) */
+/* badges become “labels” */
 .badgeRow{
   display:flex;
   flex-wrap:wrap;
@@ -374,53 +220,53 @@ section{ padding: var(--s6) 0; scroll-margin-top: 92px; }
   align-items:center;
   gap: 8px;
   border-radius: 999px;
-  border: 1px solid rgba(17,17,17,.10);
-  background: rgba(255,255,255,.70);
-  padding: 9px 12px;
+  border: 1px solid rgba(15,42,95,.14);
+  background: rgba(15,42,95,.04);
+  padding: 8px 12px;
   font-size: 13px;
-  color: rgba(17,17,17,.86);
+  color: rgba(11,18,32,.88);
   font-weight: 700;
 }
 .dot{
   width:8px;height:8px;border-radius:999px;
-  background: var(--gold);
-  box-shadow: 0 0 0 4px rgba(183,154,91,.14);
+  background: var(--accent);
 }
 
-/* =========================
-   Marquee (clean)
-   ========================= */
+/* =========================================
+   Marquee (subtle)
+   ========================================= */
 .marquee{
   margin-top: var(--s4);
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
   padding: 14px 0;
   overflow:hidden;
-  color: rgba(17,17,17,.62);
-  font-weight: 800;
+  color: rgba(11,18,32,.62);
+  font-weight: 700;
   letter-spacing: .02em;
-  border-top: 1px solid rgba(17,17,17,.10);
-  border-bottom: 1px solid rgba(17,17,17,.10);
+  background: #fff;
 }
 .track{
   display:flex;
-  gap: 22px;
+  gap: 14px;
   width:max-content;
-  animation: scroll 26s linear infinite;
+  animation: scroll 28s linear infinite;
 }
 @keyframes scroll{
   from{ transform: translateX(0); }
   to{ transform: translateX(-50%); }
 }
 .pill2{
-  border: 1px solid rgba(17,17,17,.10);
-  background: rgba(255,255,255,.70);
-  padding: 9px 12px;
+  border: 1px solid rgba(15,42,95,.14);
+  background: rgba(15,42,95,.04);
+  padding: 8px 12px;
   border-radius: 999px;
   font-size: 13px;
 }
 
-/* =========================
+/* =========================================
    Section heads
-   ========================= */
+   ========================================= */
 .sectionHead{
   display:flex;
   align-items:flex-end;
@@ -430,15 +276,15 @@ section{ padding: var(--s6) 0; scroll-margin-top: 92px; }
 }
 .sectionHead h2{
   margin:0;
-  font-family: "Space Grotesk", Inter, system-ui;
-  font-size: 15px;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: .12em;
-  color: rgba(17,17,17,.82);
+  letter-spacing: .18em;
+  color: rgba(11,18,32,.82);
+  font-weight: 800;
 }
 .sectionHead .note{
-  color: rgba(17,17,17,.56);
-  font-weight: 800;
+  color: rgba(11,18,32,.56);
+  font-weight: 650;
   font-size: 13px;
   max-width: 74ch;
   text-align:right;
@@ -448,107 +294,96 @@ section{ padding: var(--s6) 0; scroll-margin-top: 92px; }
   .sectionHead .note{ text-align:left; }
 }
 
-/* =========================
-   Process (keep)
-   ========================= */
+/* =========================================
+   Process (clean vertical timeline)
+   ========================================= */
 .processWrap{ position: relative; margin-top: 12px; }
 .processRail{
   position:absolute;
   left: 16px;
   top: 10px;
   bottom: 92px;
-  width: 1px;
-  background: rgba(17,17,17,.10);
+  width: 2px;
+  background: rgba(15,42,95,.10);
 }
-.processSteps{ display:grid; gap: 12px; }
+.processSteps{ display:grid; gap: 14px; }
 .pStep{ position: relative; padding-left: 22px; }
 .pTop{ display:flex; gap: 12px; align-items:flex-start; }
 .pNum{
-  flex: 0 0 auto;
-  width: 44px;
-  height: 44px;
+  width: 44px; height: 44px;
   border-radius: 999px;
   display:flex;
   align-items:center;
   justify-content:center;
   font-weight: 800;
-  letter-spacing: .06em;
   font-size: 12px;
-  color: rgba(17,17,17,.82);
-  background: rgba(17,17,17,.04);
-  border: 1px solid rgba(17,17,17,.08);
+  color: rgba(11,18,32,.92);
+  background: rgba(15,42,95,.06);
+  border: 1px solid rgba(15,42,95,.14);
   position: relative;
   z-index: 2;
   margin-left: -6px;
 }
-.pTitle h3{ margin: 0; }
+.pTitle h3{ margin: 0; font-size: 16px; letter-spacing: -0.01em; }
 .pSub{
   margin: 6px 0 0;
-  color: rgba(17,17,17,.62);
+  color: rgba(11,18,32,.62);
   font-size: 14px;
   line-height: 1.6;
 }
 .pBody{
   margin-top: 10px;
-  color: rgba(17,17,17,.72);
+  color: rgba(11,18,32,.74);
   font-size: 14.5px;
   line-height: 1.75;
 }
-@media (max-width: 920px){
-  .processRail{ left: 14px; }
-  .pStep{ padding-left: 18px; }
-}
 
-/* =========================
-   Cards + grids
-   ========================= */
+/* =========================================
+   Cards / Panels (flat + clean)
+   ========================================= */
 .grid3{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 14px;
 }
 @media (max-width: 980px){ .grid3{ grid-template-columns: 1fr; } }
 
 .card{
-  border-radius: calc(var(--r) + 2px);
-  border: 1px solid rgba(17,17,17,.10);
-  background: rgba(255,255,255,.78);
-  box-shadow: var(--shadow);
-  padding: 18px;
-  position:relative;
-  overflow:hidden;
-  transition: transform .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
+  border-radius: var(--r);
+  border: 1px solid var(--stroke);
+  background: #fff;
+  box-shadow: var(--shadow2);
+  padding: 20px;
+  transition: border-color .14s ease, box-shadow .14s ease;
 }
 .card:hover{
-  transform: translateY(-3px);
-  border-color: rgba(17,17,17,.18); /* less gold on hover */
-  background: rgba(255,255,255,.92);
+  border-color: rgba(15,42,95,.22);
+  box-shadow: var(--shadow);
 }
 .card h3{
   margin:0;
-  font-family: "Space Grotesk", Inter, system-ui;
-  font-size: 18px;
-  letter-spacing: -0.02em;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 .card p{
   margin-top: 10px;
-  color: rgba(17,17,17,.70);
+  color: rgba(11,18,32,.70);
   font-size: 14.5px;
   line-height: 1.6;
 }
 .card .meta{
   margin-top: 14px;
-  color: rgba(17,17,17,.56);
+  color: rgba(11,18,32,.56);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 650;
 }
 
-/* Panels */
 .panel{
   border-radius: var(--r);
-  border: 1px solid rgba(17,17,17,.10);
-  background: rgba(255,255,255,.78);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--stroke);
+  background: #fff;
+  box-shadow: var(--shadow2);
   padding: 22px;
 }
 
@@ -556,56 +391,53 @@ section{ padding: var(--s6) 0; scroll-margin-top: 92px; }
 .statement{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 18px;
   align-items: start;
 }
 @media (max-width: 980px){ .statement{ grid-template-columns: 1fr; } }
 
 .bigType{
-  font-family: "Space Grotesk", Inter, system-ui;
-  font-size: clamp(30px, 3.4vw, 50px);
-  letter-spacing: -0.04em;
-  line-height: 1.05;
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 3.2vw, 46px);
+  letter-spacing: -0.02em;
+  line-height: 1.12;
 }
-.gold{
-  /* quieter “gold” */
-  background: linear-gradient(135deg, rgba(183,154,91,.95), rgba(17,17,17,.92));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+
+.gold{ color: var(--accent); } /* keep class but make it institutional */
+
 .smallList{
-  color: rgba(17,17,17,.70);
+  color: rgba(11,18,32,.70);
   font-size: 15px;
   line-height: 1.7;
 }
-.smallList b{ color: rgba(17,17,17,.90); }
+.smallList b{ color: rgba(11,18,32,.90); }
 
 hr.sep{
-  border:0; height:1px; background: rgba(17,17,17,.10);
+  border:0; height:1px; background: var(--stroke);
   margin: var(--s6) 0 0;
 }
 
-/* Services pricing layout */
+/* =========================================
+   Pricing grid
+   ========================================= */
 .priceGrid{
   display:grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 12px;
+  gap: 14px;
   margin-top: 14px;
 }
 .price{
   grid-column: span 6;
-  border-radius: calc(var(--r) + 2px);
-  border: 1px solid rgba(17,17,17,.10);
-  background: rgba(255,255,255,.78);
-  box-shadow: var(--shadow);
-  padding: 18px;
-  transition: transform .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
+  border-radius: var(--r);
+  border: 1px solid var(--stroke);
+  background: #fff;
+  box-shadow: var(--shadow2);
+  padding: 20px;
+  transition: border-color .14s ease, box-shadow .14s ease;
 }
 .price:hover{
-  transform: translateY(-3px);
-  border-color: rgba(17,17,17,.18);
-  background: rgba(255,255,255,.92);
+  border-color: rgba(15,42,95,.22);
+  box-shadow: var(--shadow);
 }
 .price .top{
   display:flex;
@@ -615,373 +447,201 @@ hr.sep{
 }
 .price h3{
   margin:0;
-  font-family: "Space Grotesk", Inter, system-ui;
-  font-size: 18px;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+  font-size: 16px;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 .amt{
-  border: 1px solid rgba(17,17,17,.12);
-  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(15,42,95,.14);
+  background: rgba(15,42,95,.04);
   padding: 8px 12px;
   border-radius: 999px;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 13px;
   white-space: nowrap;
-  color: rgba(17,17,17,.90);
+  color: rgba(11,18,32,.90);
 }
 .price .meta{
   margin-top: 10px;
-  color: rgba(17,17,17,.68);
+  color: rgba(11,18,32,.68);
   font-size: 13.5px;
   line-height: 1.55;
 }
 .price ul{
   margin: 12px 0 0;
   padding-left: 18px;
-  color: rgba(17,17,17,.72);
+  color: rgba(11,18,32,.72);
   font-size: 14px;
 }
 .price li{ margin: 8px 0; }
 .deliverables{
   margin-top: 12px;
   padding-top: 12px;
-  border-top: 1px solid rgba(17,17,17,.10);
-  color: rgba(17,17,17,.64);
+  border-top: 1px solid var(--stroke);
+  color: rgba(11,18,32,.64);
   font-size: 13px;
   line-height: 1.55;
 }
-.deliverables b{ color: rgba(17,17,17,.90); }
+.deliverables b{ color: rgba(11,18,32,.90); }
 
 .disclaimer{
   margin-top: 14px;
   border-radius: var(--r);
-  border: 1px solid rgba(17,17,17,.10);
-  background: rgba(255,255,255,.78);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--stroke);
+  background: #fff;
+  box-shadow: var(--shadow2);
   padding: 18px;
-  color: rgba(17,17,17,.64);
+  color: rgba(11,18,32,.64);
   font-size: 13px;
   line-height: 1.6;
 }
-.disclaimer b{ color: rgba(17,17,17,.90); }
+.disclaimer b{ color: rgba(11,18,32,.90); }
 
 @media (max-width: 980px){
   .price{ grid-column: span 12; }
 }
 
-/* Forms */
+/* =========================================
+   Forms (institutional)
+   ========================================= */
 form{ margin-top: 12px; display:grid; gap: 10px; }
 .formRow{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 @media (max-width: 980px){ .formRow{ grid-template-columns: 1fr; } }
 
 label{
   display:block;
-  font-size: 12px;
-  letter-spacing: .14em;
+  font-size: 11px;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: rgba(17,17,17,.60);
-  font-weight: 900;
+  color: rgba(11,18,32,.60);
+  font-weight: 800;
   margin-bottom: 6px;
 }
 input, textarea, select{
   width:100%;
-  border-radius: 14px;
-  border: 1px solid rgba(17,17,17,.14);
-  background: rgba(255,255,255,.92);
+  border-radius: 10px;
+  border: 1px solid rgba(11,18,32,.16);
+  background: #fff;
   color: var(--ink);
   padding: 12px;
   outline:none;
   font-size: 14px;
-  font-family: Inter, system-ui;
+  font-family: inherit;
 }
 textarea{ min-height: 120px; resize: vertical; }
 input:focus, textarea:focus, select:focus{
-  border-color: rgba(183,154,91,.55);
-  box-shadow: 0 0 0 4px rgba(183,154,91,.12);
+  border-color: rgba(15,42,95,.45);
+  box-shadow: 0 0 0 4px rgba(15,42,95,.10);
 }
 .micro{
-  color: rgba(17,17,17,.58);
+  color: rgba(11,18,32,.58);
   font-size: 13px;
   margin-top: 10px;
 }
 
-/* Scroll transitions */
+/* =========================================
+   Reveal animations (keep but subtle)
+   ========================================= */
 .reveal{
   opacity: 0;
-  transform: translateY(22px);
-  filter: blur(10px);
-  transition: opacity .85s var(--ease), transform .85s var(--ease), filter .85s var(--ease);
-  will-change: opacity, transform, filter;
+  transform: translateY(16px);
+  transition:
+    opacity .7s var(--ease),
+    transform .7s var(--ease);
+  will-change: opacity, transform;
 }
 .reveal.in{
   opacity: 1;
   transform: translateY(0);
-  filter: blur(0);
 }
 
 .stagger > *{
   opacity: 0;
-  transform: translateY(16px);
-  filter: blur(8px);
-  transition: opacity .8s var(--ease), transform .8s var(--ease), filter .8s var(--ease);
+  transform: translateY(12px);
+  transition:
+    opacity .65s var(--ease),
+    transform .65s var(--ease);
 }
 .stagger.in > *{
   opacity: 1;
   transform: translateY(0);
-  filter: blur(0);
 }
 .stagger.in > *:nth-child(1){ transition-delay: 0ms; }
-.stagger.in > *:nth-child(2){ transition-delay: 90ms; }
-.stagger.in > *:nth-child(3){ transition-delay: 180ms; }
-.stagger.in > *:nth-child(4){ transition-delay: 270ms; }
-.stagger.in > *:nth-child(5){ transition-delay: 360ms; }
-.stagger.in > *:nth-child(6){ transition-delay: 450ms; }
+.stagger.in > *:nth-child(2){ transition-delay: 80ms; }
+.stagger.in > *:nth-child(3){ transition-delay: 160ms; }
+.stagger.in > *:nth-child(4){ transition-delay: 240ms; }
+.stagger.in > *:nth-child(5){ transition-delay: 320ms; }
+.stagger.in > *:nth-child(6){ transition-delay: 400ms; }
 
-/* Footer */
+/* =========================================
+   Footer
+   ========================================= */
 footer{
   padding: var(--s5) 0;
-  color: rgba(17,17,17,.56);
-  border-top: 1px solid rgba(17,17,17,.10);
+  color: rgba(11,18,32,.56);
+  border-top: 1px solid var(--stroke);
   margin-top: var(--s6);
   font-size: 13px;
 }
 
-/* Optional: Predict header + Geo footprint (kept) */
-.predictHeader{
-  margin-top: 18px;
-  font-family: 'Space Grotesk', Inter, system-ui;
-  font-size: clamp(22px, 2.1vw, 30px);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  font-weight: 650;
-  color: rgba(17,17,17,.92);
-  position: relative;
-  display: inline-block;
-}
-.predictHeader .predictAccent{
-  color: rgba(168, 132, 56, 0.95);
-  font-weight: 750;
-}
-.predictHeader::after{
-  content: "";
-  position: absolute;
-  left: -6px;
-  right: -6px;
-  bottom: 2px;
-  height: 0.55em;
-  background: rgba(214, 167, 64, .16); /* quieter */
-  border-radius: 10px;
-  z-index: -1;
+/* =========================================
+   Mobile nav (simple + reliable)
+   ========================================= */
+header .mobile-menu-toggle,
+header .mobile-menu { display: none; }
+
+header .topbar { position: relative; }
+
+@media (max-width: 920px){
+  nav{ display:none; }
 }
 
-.geo-line{
-  margin-top: 14px !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  flex-wrap: wrap !important;
-}
-.geo-label{
-  font-size: 12px !important;
-  letter-spacing: .12em !important;
-  text-transform: uppercase !important;
-  opacity: .65 !important;
-}
-.geo-list{
-  display: inline-block !important;
-  font-size: 13px !important;
-  letter-spacing: .02em !important;
-  opacity: .82 !important;
-  padding: 8px 10px !important;
-  border-radius: 999px !important;
-  border: 1px solid rgba(0,0,0,.12) !important;
-  background: rgba(255,255,255,.60) !important;
-}
-.geo-note{
-  margin-top: 10px !important;
-  font-size: 13px !important;
-  opacity: .7 !important;
-}
-
-/* =========================================================
-   INSTITUTIONAL OVERRIDE LAYER (paste at bottom of lux.css)
-   Purpose: keep your tags/classes, change the entire look.
-   ========================================================= */
-
-:root{
-  --bg: #ffffff !important;
-  --ink: #0b1220 !important;
-  --muted: rgba(11,18,32,.68) !important;
-  --muted2: rgba(11,18,32,.52) !important;
-
-  --stroke: rgba(11,18,32,.10) !important;
-  --stroke2: rgba(11,18,32,.16) !important;
-
-  /* move accent from “gold” to institutional navy */
-  --gold: #0f2a5f !important;
-
-  --r: 10px !important;
-  --shadow: 0 10px 24px rgba(11,18,32,.06) !important;
-}
-
-/* kill the “lux wash” look */
-.bgWash,
-.grain{ display:none !important; }
-
-html, body{
-  background: #ffffff !important;
-  color: var(--ink) !important;
-}
-
-/* tighten overall vibe: less playful */
-::selection{ background: rgba(15,42,95,.14) !important; }
-
-/* HEADER becomes institutional bar */
-header{
-  background: rgba(255,255,255,.92) !important;
-  border-bottom: 1px solid rgba(11,18,32,.10) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-}
-
-.brand{
-  font-family: Inter, system-ui !important;
-  font-weight: 700 !important;
-  letter-spacing: .08em !important;
-  font-size: 14px !important;
-  color: rgba(11,18,32,.92) !important;
-}
-
-/* NAV links: no pills */
-nav a{
-  border-radius: 8px !important;
-  padding: 8px 10px !important;
-}
-nav a:hover{
-  background: rgba(15,42,95,.06) !important;
-  color: rgba(11,18,32,.92) !important;
-  transform: none !important;
-}
-
-/* Typography: institutional hierarchy */
-.kicker{
-  color: rgba(11,18,32,.58) !important;
-  letter-spacing: .18em !important;
-  font-weight: 700 !important;
-}
-
-.h1{
-  font-family: ui-serif, Georgia, "Times New Roman", serif !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.03em !important;
-  line-height: 1.03 !important;
-  max-width: 24ch !important;
-}
-
-.lede{
-  color: rgba(11,18,32,.72) !important;
-  font-size: 18px !important;
-}
-
-/* Buttons: real institutional buttons (not pills) */
-.btn{
-  border-radius: 10px !important;
-  background: #ffffff !important;
-  border: 1px solid rgba(11,18,32,.16) !important;
-  box-shadow: none !important;
-  font-weight: 700 !important;
-}
-.btn:hover{
-  transform: none !important;
-  background: rgba(15,42,95,.04) !important;
-  border-color: rgba(15,42,95,.22) !important;
-}
-
-.btn.primary{
-  background: #0f2a5f !important;
-  border-color: #0f2a5f !important;
-  color: #fff !important;
-}
-.btn.primary:hover{
-  background: #0b234f !important;
-}
-
-/* Arrow bubble becomes subtle (no glossy orb) */
-.arrow{
-  background: transparent !important;
-  border: 1px solid rgba(255,255,255,.28) !important;
-}
-
-/* Cards: remove glass + gold glow, add clean white panels */
-.heroCard,
-.card,
-.panel,
-.price,
-.disclaimer{
-  background: #ffffff !important;
-  border: 1px solid rgba(11,18,32,.10) !important;
-  box-shadow: 0 10px 24px rgba(11,18,32,.06) !important;
-}
-
-/* Kill gold radial overlay inside hero card */
-.heroCard::after{ display:none !important; }
-
-.card:hover,
-.price:hover{
-  transform: none !important;
-  border-color: rgba(15,42,95,.22) !important;
-}
-
-/* Tags/pills/badges: make them look like labels, not “cute chips” */
-.badge,
-.pill2,
-.amt{
-  background: rgba(15,42,95,.04) !important;
-  border: 1px solid rgba(15,42,95,.12) !important;
-  color: rgba(11,18,32,.88) !important;
-  font-weight: 700 !important;
-}
-.dot{
-  background: #0f2a5f !important;
-  box-shadow: none !important;
-}
-
-/* Marquee: cleaner */
-.marquee{
-  border-top: 1px solid rgba(11,18,32,.10) !important;
-  border-bottom: 1px solid rgba(11,18,32,.10) !important;
-  color: rgba(11,18,32,.62) !important;
-  background: transparent !important;
-}
-
-/* Forms: more institutional */
-input, textarea, select{
-  background: #ffffff !important;
-  border: 1px solid rgba(11,18,32,.14) !important;
-  border-radius: 10px !important;
-}
-input:focus, textarea:focus, select:focus{
-  border-color: rgba(15,42,95,.45) !important;
-  box-shadow: 0 0 0 4px rgba(15,42,95,.10) !important;
-}
-
-/* Big “gold gradient” text becomes institutional navy emphasis */
-.gold{
-  background: none !important;
-  color: #0f2a5f !important;
-}
-
-/* Mobile menu panel: clean white, not glassy */
+/* If you have the hamburger + dropdown in HTML/JS already */
 @media (max-width: 768px){
-  .mobile-menu{
-    background: #ffffff !important;
-    border: 1px solid rgba(11,18,32,.10) !important;
-    box-shadow: 0 12px 30px rgba(11,18,32,.10) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+  header .desktop-nav,
+  header .headerCtas{ display:none !important; }
+
+  header .mobile-menu-toggle{
+    display:inline-flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 34px;
+    height: 28px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
   }
-  .mobile-menu a:last-child{
-    background: #0f2a5f !important;
+  header .mobile-menu-toggle .line{
+    display:block;
+    width: 34px;
+    height: 3px;
+    background: rgba(11,18,32,.92);
+    border-radius: 2px;
+  }
+
+  .mobile-menu{ display:none !important; }
+  .mobile-menu.is-open{
+    display:block !important;
+    position:absolute;
+    right: 0;
+    top: 52px;
+    background:#fff;
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    min-width: 220px;
+    padding: 10px;
+    z-index: 9999;
+  }
+  .mobile-menu.is-open a{
+    display:block;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+  .mobile-menu.is-open a:hover{
+    background: rgba(15,42,95,.06);
   }
 }
