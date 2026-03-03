@@ -5,8 +5,8 @@
   if (toggle && menu) {
     toggle.addEventListener('click', function (event) {
       event.stopPropagation();
-      var isOpen = menu.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
+      var open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
     });
 
     document.addEventListener('click', function (event) {
