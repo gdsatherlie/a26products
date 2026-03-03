@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><title>a26 Products Insights</title><link>https://www.a26products.com/insights/index.html</link><description>Practical manufacturing insights and tools.</description><lastBuildDate>Mon, 02 Mar 2026 00:00:00 GMT</lastBuildDate>
-<item><title>How to manufacture a product</title><link>https://www.a26products.com/insights/how-to-manufacture-a-product.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>How to choose a factory</title><link>https://www.a26products.com/insights/how-to-choose-a-factory.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>Sampling vs production</title><link>https://www.a26products.com/insights/sampling-vs-production.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>Tooling 101</title><link>https://www.a26products.com/insights/tooling-101.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>Quality control and AQL</title><link>https://www.a26products.com/insights/quality-control-aql.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<rss version="2.0"><channel><title>a26 Products Insights</title><link>https://www.a26products.com/insights/index.html</link><description>Practical manufacturing insights with operator tools and templates.</description><lastBuildDate>Mon, 02 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item><title>How to manufacture a product</title><description>End-to-end manufacturing roadmap with readiness worksheet.</description><link>https://www.a26products.com/insights/how-to-manufacture-a-product.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>How to choose a factory</title><description>Capability-first factory selection framework and scorecard.</description><link>https://www.a26products.com/insights/how-to-choose-a-factory.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>Sampling vs production</title><description>Sample-to-production drift prevention and lock criteria.</description><link>https://www.a26products.com/insights/sampling-vs-production.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>Tooling 101</title><description>Tooling ownership, revision boundaries, and risk controls.</description><link>https://www.a26products.com/insights/tooling-101.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>What is MOQ?</title><description>MOQ tradeoffs and negotiation levers for operators.</description><link>https://www.a26products.com/insights/what-is-moq.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>Lead times explained</title><description>Lead-time planning with risk triggers and critical path logic.</description><link>https://www.a26products.com/insights/lead-times-explained.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>China vs Vietnam manufacturing</title><description>Country-fit matrix and decision criteria by program needs.</description><link>https://www.a26products.com/insights/china-vs-vietnam-manufacturing.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>Quality control and AQL</title><description>QC release governance and acceptance criteria framework.</description><link>https://www.a26products.com/insights/quality-control-aql.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
 </channel></rss>
