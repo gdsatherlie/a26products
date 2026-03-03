@@ -1,15 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0"><channel>
-<title>a26 Products Insights</title>
-<link>https://www.a26products.com/insights/index.html</link>
-<description>Manufacturing guides on sourcing, tooling, quality control, lead times, and execution systems.</description>
-<language>en-us</language>
-<item><title>How to manufacture a product: beginner roadmap</title><link>https://www.a26products.com/insights/how-to-manufacture-a-product.html</link><description>Long-form beginner roadmap from idea to shipment.</description><guid>https://www.a26products.com/insights/how-to-manufacture-a-product.html</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>How to choose a manufacturer: factory vetting playbook</title><link>https://www.a26products.com/insights/how-to-choose-a-factory.html</link><description>Capability-first scoring rubric and vetting process.</description><guid>https://www.a26products.com/insights/how-to-choose-a-factory.html</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>What is MOQ? Meaning, cost impact, and negotiation</title><link>https://www.a26products.com/insights/what-is-moq.html</link><description>MOQ strategy and negotiation levers for first production runs.</description><guid>https://www.a26products.com/insights/what-is-moq.html</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>Sampling vs production: why approved samples drift</title><link>https://www.a26products.com/insights/sampling-vs-production.html</link><description>Spec lock and change-control methods for repeatability.</description><guid>https://www.a26products.com/insights/sampling-vs-production.html</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>Tooling 101: ownership, cost structure, and red flags</title><link>https://www.a26products.com/insights/tooling-101.html</link><description>Tooling quote risks and ownership controls.</description><guid>https://www.a26products.com/insights/tooling-101.html</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>AQL quality control in plain English</title><link>https://www.a26products.com/insights/quality-control-aql.html</link><description>QC acceptance thresholds and release governance.</description><guid>https://www.a26products.com/insights/quality-control-aql.html</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>Manufacturing lead times explained</title><link>https://www.a26products.com/insights/lead-times-explained.html</link><description>Critical-path planning and delay prevention worksheet.</description><guid>https://www.a26products.com/insights/lead-times-explained.html</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
-<item><title>China vs Vietnam manufacturing: decision matrix</title><link>https://www.a26products.com/insights/china-vs-vietnam-manufacturing.html</link><description>Country tradeoff matrix by category fit and risk profile.</description><guid>https://www.a26products.com/insights/china-vs-vietnam-manufacturing.html</guid><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>a26 Products Insights</title><link>https://www.a26products.com/insights/index.html</link><description>Practical manufacturing insights and tools.</description><lastBuildDate>Mon, 02 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item><title>How to manufacture a product</title><link>https://www.a26products.com/insights/how-to-manufacture-a-product.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>How to choose a factory</title><link>https://www.a26products.com/insights/how-to-choose-a-factory.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>Sampling vs production</title><link>https://www.a26products.com/insights/sampling-vs-production.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>Tooling 101</title><link>https://www.a26products.com/insights/tooling-101.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title>Quality control and AQL</title><link>https://www.a26products.com/insights/quality-control-aql.html</link><pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate></item>
 </channel></rss>
