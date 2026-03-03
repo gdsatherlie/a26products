@@ -42,13 +42,11 @@ main a.btn,.desktopNav a,.brand,.mobileMenu a,.headerCtas a,.footer a{text-decor
 .twoCol{grid-template-columns:repeat(2,minmax(0,1fr))}
 .previewGrid,.vignetteGrid,.tiles,.timeline{grid-template-columns:repeat(3,minmax(0,1fr))}
 .factsBox,.callout,.checklist,.tile,.tableWrap,.shareBox,.vignette,.toc,.toolboxBand,.faqBlock{border:1px solid var(--border);border-radius:var(--radius);background:#fff;padding:var(--space-4)}
-.factsBox.whereOperate{position:relative;overflow:hidden;background:linear-gradient(180deg,#f9fbff 0%,#fff 100%);box-shadow:0 16px 34px rgba(15,42,95,.08)}
-.factsBox.whereOperate::after{content:"";position:absolute;top:-80px;right:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(30,102,255,.16) 0%,rgba(30,102,255,0) 70%)}
-.whereOperate h2{margin-top:0;margin-bottom:var(--space-3)}
-.factsList{list-style:none;padding:0;margin:0;display:grid;gap:var(--space-3);position:relative;z-index:1}
-.factsList li{margin:0;padding:var(--space-3);border:1px solid #dbe3f3;border-radius:9px;background:#fff}
-.factsLabel{display:block;font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:#355897;font-weight:800;margin-bottom:4px}
-.factsValue{display:block;color:#1f345a;font-weight:600;line-height:1.5}
+.whereOperate h2{margin-top:0}
+.whereOperate .factsList{margin:0 0 var(--space-2);padding-left:20px}
+.whereOperate .factsList li{margin-bottom:var(--space-3);color:var(--muted)}
+.whereOperate .factsList li:last-child{margin-bottom:0}
+.whereOperate .factsList strong{color:var(--ink)}
 .toc ul{margin:0;padding-left:18px}
 .table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--border);margin:var(--space-4) 0 var(--space-5)}
 .table th,.table td{padding:var(--space-3);text-align:left;vertical-align:top;border-right:1px solid var(--border);border-bottom:1px solid var(--border);font-size:.95rem}
