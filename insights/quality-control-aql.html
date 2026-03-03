@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quality control and AQL: practical release decisions</title>
+  <meta name="description" content="Quality control and AQL explained simply with defect examples, acceptance criteria, and shipment decision guidance." />
+  <link rel="canonical" href="https://www.a26products.com/insights/quality-control-aql.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Quality control and AQL: practical release decisions" />
+  <meta property="og:description" content="Quality control and AQL explained simply with defect examples, acceptance criteria, and shipment decision guidance." />
+  <meta property="og:url" content="https://www.a26products.com/insights/quality-control-aql.html" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVWP0EBRBC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-WVWP0EBRBC');
+  </script>
+  <link rel="alternate" type="application/rss+xml" title="a26 Products Insights" href="/insights/rss.xml" />
+  <link rel="stylesheet" href="/lux.css?v=inst-insights-spacing-plain-20260303" />
+</head>
+<body>
+<header class="siteHeader"><div class="container topbar"><a class="brand" href="/index.html">A26 PRODUCTS</a><nav class="desktopNav" aria-label="Primary"><a href="/about.html">About</a><a href="/services.html">Services</a><a href="/insights/index.html">Insights</a></nav><div class="headerCtas"><a class="btn ghost" href="/index.html#intake">Start intake</a><a class="btn primary" href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a></div><button class="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu"><span></span><span></span><span></span></button></div><div class="mobileMenu" id="mobileMenu"><a href="/about.html">About</a><a href="/services.html">Services</a><a href="/insights/index.html">Insights</a><a href="/index.html#intake">Start intake</a><a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a></div></header>
+<main><section class="section hero"><div class="content article"><p class="breadcrumbs"><a href="/index.html">Home</a> > <a href="/insights/index.html">Insights</a> > Quality control and AQL: practical release decisions</p><h1>Quality control and AQL: practical release decisions</h1><p>Quality control and AQL explained simply with defect examples, acceptance criteria, and shipment decision guidance.</p><p><strong>Reading time:</strong> 34 min · <strong>Last updated:</strong> 2026-03-03</p><div class="toolboxBand"><p><strong>Where this fits in the a26 Manufacturing Accountability Model:</strong> Release</p></div><div class="toc"><h3>In this guide</h3><ul><li><a href="#definitions">Definitions in plain English</a></li><li><a href="#steps">Step-by-step approach</a></li><li><a href="#cost-drivers">What drives cost</a></li><li><a href="#mistakes">Common mistakes</a></li><li><a href="#red-flags">Red flags</a></li><li><a href="#factory-questions">Questions to ask a factory</a></li><li><a href="#checklist">Checklist / worksheet</a></li><li><a href="#tools">Tools / templates</a></li><li><a href="#decision-tree">Decision tree: what to do next</a></li><li><a href="#not-solve">What this does NOT solve</a></li><li><a href="#walk-away">When to walk away</a></li><li><a href="#faq">FAQ</a></li></ul></div></div></section><section class="section alt"><div class="content article">
+    <h2 id="definitions">Definitions in plain English</h2>
+    <p>Quality control and AQL: practical release decisions sounds technical, but the core idea is simple: write down what matters, confirm what is true, and avoid leaving decisions implicit. When teams skip these basics, problems stay hidden until the expensive stage. When teams follow them, issues become visible earlier and easier to solve.</p>
+    <p>In practical terms, this topic affects supplier communication, sample approval decisions, and release confidence. If one detail is unclear—like acceptable tolerance range, packaging strength, or a change-order boundary—it can create repeated arguments, delays, and rework. Plain language plus clear ownership is the fastest way to reduce that risk.</p>
+
+    <h2 id="steps">Step-by-step approach</h2>
+    <ol>
+      <li>Define the objective in one sentence, including success and failure conditions.</li>
+      <li>List the critical assumptions that must hold true.</li>
+      <li>Translate assumptions into specific checks and owner assignments.</li>
+      <li>Run a short decision cadence: what changed, what risk increased, what decision is required now.</li>
+      <li>Log approved changes with date, approver, and impacted documents.</li>
+      <li>Review before every milestone so late surprises do not compound.</li>
+    </ol>
+    <p>This sequence is intentionally simple. Teams do not need a complex system; they need a reliable one. Most execution failures happen because basics are skipped under schedule pressure.</p>
+
+    <h2 id="cost-drivers">What drives cost</h2>
+    <p>Cost is usually driven by uncertainty more than by any single line item. Rework loops, unclear specs, rushed freight decisions, and unresolved defects all add real cost. Teams sometimes focus only on quoted unit cost while ignoring process reliability and change frequency, which leads to under-estimation.</p>
+    <p>Key cost drivers include product complexity, number of revision cycles, material variability, packaging requirements, lead-time buffers, and the quality of communication. If you improve clarity and reduce late changes, you usually improve cost predictability at the same time.</p>
+
+    <h2 id="mistakes">Common mistakes</h2>
+    <ul>
+      <li>Using verbal approvals for changes that affect quality or timeline.</li>
+      <li>Assuming sample approval means production output will match automatically.</li>
+      <li>Comparing supplier quotes without normalizing assumptions.</li>
+      <li>Treating inspection reports as results without clear disposition rules.</li>
+      <li>Escalating late because no threshold was defined in advance.</li>
+      <li>Splitting decision records across chat, email, and undocumented calls.</li>
+      <li>Ignoring packaging and logistics constraints until the end.</li>
+    </ul>
+
+    <h2 id="red-flags">Red flags</h2>
+    <ul>
+      <li>Quote language is vague (“as discussed”) with no explicit assumptions.</li>
+      <li>Critical tolerances are missing or expressed inconsistently.</li>
+      <li>Supplier avoids naming owner for issue closure.</li>
+      <li>Timeline confidence is always “on track” without evidence.</li>
+      <li>Material substitutions appear after approval stages.</li>
+      <li>Defect photos are provided but no clear pass/hold logic exists.</li>
+      <li>Change orders increase while root causes are not documented.</li>
+    </ul>
+
+    <h2 id="factory-questions">Questions to ask a factory</h2>
+    <ul>
+      <li>Which assumptions in your current plan are most fragile?</li>
+      <li>What evidence do you use to confirm process stability by shift?</li>
+      <li>What changes require written approval, and who signs off?</li>
+      <li>How do you classify defects, and who makes disposition decisions?</li>
+      <li>Which stage is currently highest risk for timeline slip?</li>
+      <li>What backup actions are available if key material is delayed?</li>
+      <li>How will you report risk changes week to week?</li>
+    </ul>
+
+    <h2 id="checklist">Checklist / worksheet</h2>
+    <table class="table"><thead><tr><th>Checkpoint</th><th>What to verify</th><th>Owner</th><th>Status</th></tr></thead><tbody>
+      <tr><td>Spec clarity</td><td>Critical dimensions and tolerances documented</td><td>Product lead</td><td>Open/Done</td></tr>
+      <tr><td>Material lock</td><td>Approved material reference and substitution policy</td><td>Sourcing lead</td><td>Open/Done</td></tr>
+      <tr><td>Sample gate</td><td>Pass/fail criteria agreed before review</td><td>Program owner</td><td>Open/Done</td></tr>
+      <tr><td>Milestone plan</td><td>Owners and confidence per milestone</td><td>Ops owner</td><td>Open/Done</td></tr>
+      <tr><td>Release criteria</td><td>QC threshold and disposition logic defined</td><td>Quality lead</td><td>Open/Done</td></tr>
+    </tbody></table>
+
+    <h2 id="tools">Tools / templates</h2>
+    <h3>Factory-ready checklist (copy/paste)</h3>
+    <pre class="codeSnippet">- Spec version:
+- Critical dimensions + tolerance ranges:
+- Approved materials + finish references:
+- Packaging spec + carton performance requirement:
+- QC acceptance criteria (critical/major/minor):
+- Pilot run date + owner:
+- Change-control approver:
+- Shipment release authority:</pre>
+
+    <h3>Template: email to a factory</h3>
+    <pre class="codeSnippet">Subject: Alignment before next production step
+
+Hi [Factory Contact],
+
+Before we proceed, please confirm by [date]:
+1) Spec version currently in use
+2) Material and finish confirmation against approved references
+3) Open issues with owner and closure date
+4) Current milestone confidence (high/medium/low)
+5) Any changes requiring formal approval
+
+We will treat your reply as the current operating record.
+
+Thanks,
+[Name]
+[Role]</pre>
+
+    <h3>Scorecard: how to evaluate suppliers</h3>
+    <table class="table"><thead><tr><th>Dimension</th><th>Evidence requested</th><th>Score (1–5)</th></tr></thead><tbody>
+      <tr><td>Capability fit</td><td>Comparable builds and process evidence</td><td></td></tr>
+      <tr><td>Process reliability</td><td>In-process checks and escalation path</td><td></td></tr>
+      <tr><td>Communication quality</td><td>Clarity, speed, owner accountability</td><td></td></tr>
+      <tr><td>Commercial clarity</td><td>MOQ, revisions, lead-time assumptions</td><td></td></tr>
+      <tr><td>Risk transparency</td><td>Early disclosure of constraints</td><td></td></tr>
+    </tbody></table>
+
+    <h2 id="decision-tree">Decision tree: what to do next</h2>
+    <pre class="codeSnippet">If key assumptions are unclear -> pause and define assumptions in writing.
+If assumptions are clear but evidence is weak -> request proof and assign owner.
+If evidence is strong but milestones are slipping -> escalate with dated recovery plan.
+If defects exceed agreed threshold -> hold shipment and run disposition decision.
+If repeated issues recur without root-cause closure -> tighten change control or re-evaluate supplier fit.
+If critical transparency is missing after escalation -> prepare walk-away option.</pre>
+
+    <h2 id="not-solve">What this does NOT solve</h2>
+    <ul>
+      <li>It does not remove all production risk.</li>
+      <li>It does not replace legal or regulatory counsel.</li>
+      <li>It does not guarantee customs outcomes.</li>
+      <li>It does not guarantee final pricing stability.</li>
+      <li>It does not remove the need for timely client approvals.</li>
+      <li>It does not fix poor fit if supplier capability is fundamentally mismatched.</li>
+    </ul>
+
+    <h2 id="walk-away">When to walk away</h2>
+    <ul>
+      <li>Repeated material substitutions without approval.</li>
+      <li>No accountable owner for recurring quality failures.</li>
+      <li>Timeline confidence repeatedly misreported.</li>
+      <li>Critical documents remain incomplete after escalation windows.</li>
+      <li>Change requests are implemented before approval.</li>
+      <li>Defect thresholds are ignored to force shipment.</li>
+      <li>Communication degrades under normal pressure, not just exceptional events.</li>
+      <li>Commercial assumptions change materially without transparent rationale.</li>
+    </ul>
+
+    <h2 id="related">Related</h2>
+    <div class="related">
+      <a href="/insights/how-to-choose-a-factory.html">How to choose a factory</a>
+      <a href="/insights/quality-control-aql.html">Quality control and AQL</a>
+      <a href="/services.html">Services overview</a>
+      <a href="/index.html#intake">Start intake</a>
+    </div>
+
+    <h2 id="faq">FAQ</h2>
+    <h3>How early should we apply this process?</h3><p>As early as possible, before tooling or production commitments create expensive lock-in.</p>
+    <h3>Can this work with an existing factory?</h3><p>Yes. Most benefits come from clearer operating discipline, not from changing suppliers immediately.</p>
+    <h3>How detailed should decision logs be?</h3><p>Detailed enough that another person can reconstruct what was approved, by whom, and why.</p>
+    <h3>What if the team is small?</h3><p>Use fewer artifacts, but keep ownership and escalation logic explicit.</p>
+    <h3>Does this replace inspection?</h3><p>No. It improves what inspection means by defining acceptance and disposition logic in advance.</p>
+    <h3>What is the first action this week?</h3><p>Create a one-page checklist and run it in your next supplier status review.</p>
+
+    <div class="shareBox"><h3>Share / cite this</h3>
+    <p>a26 Products Insights — Quality control and AQL: practical release decisions (https://www.a26products.com/insights/quality-control-aql.html)</p>
+    <p><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.a26products.com/insights/quality-control-aql.html" target="_blank" rel="noopener">Share on LinkedIn</a> · <a href="https://twitter.com/intent/tweet?url=https://www.a26products.com/insights/quality-control-aql.html&text=Quality%20control%20and%20AQL:%20practical%20release%20decisions" target="_blank" rel="noopener">Share on X</a> · <a href="mailto:?subject=Quality%20control%20and%20AQL:%20practical%20release%20decisions&body=https://www.a26products.com/insights/quality-control-aql.html">Share by email</a></p></div>
+</div></section></main>
+<footer class="footer"><div class="container footerGrid"><div><h4>Company</h4><a href="/about.html">About</a><a href="/services.html">Services</a><a href="/insights/index.html">Insights hub</a><a href="/index.html#intake">Start intake</a></div><div><h4>Top insights</h4><a href="/insights/how-to-manufacture-a-product.html">How to manufacture a product</a><a href="/insights/how-to-choose-a-factory.html">How to choose a factory</a><a href="/insights/sampling-vs-production.html">Sampling vs production</a><a href="/insights/tooling-101.html">Tooling 101</a><a href="/insights/quality-control-aql.html">Quality control and AQL</a></div><div><h4>Get started</h4><a href="/index.html#intake">Start intake</a><a href="https://calendly.com/a26companies/15min" target="_blank" rel="noopener">Request a call</a><a href="/thank-you.html">Submission confirmation</a></div><div><h4>Resources</h4><a href="/sitemap.xml">Sitemap</a><a href="/robots.txt">Robots</a><a href="/insights/rss.xml">Insights RSS</a></div></div><div class="container footerBottom">© <span data-year></span> A26 Products</div></footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Quality control and AQL: practical release decisions","description":"Quality control and AQL explained simply with defect examples, acceptance criteria, and shipment decision guidance.","author":{"@type":"Organization","name":"a26 Products"},"datePublished":"2026-03-02","dateModified":"2026-03-03","mainEntityOfPage":"https://www.a26products.com/insights/quality-control-aql.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "How early should we apply this process?", "acceptedAnswer": {"@type": "Answer", "text": "As early as possible, before tooling or production commitments create expensive lock-in."}},{"@type": "Question", "name": "Can this work with an existing factory?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Most benefits come from clearer operating discipline, not from changing suppliers immediately."}},{"@type": "Question", "name": "How detailed should decision logs be?", "acceptedAnswer": {"@type": "Answer", "text": "Detailed enough that another person can reconstruct what was approved, by whom, and why."}},{"@type": "Question", "name": "What if the team is small?", "acceptedAnswer": {"@type": "Answer", "text": "Use fewer artifacts, but keep ownership and escalation logic explicit."}},{"@type": "Question", "name": "Does this replace inspection?", "acceptedAnswer": {"@type": "Answer", "text": "No. It improves what inspection means by defining acceptance and disposition logic in advance."}},{"@type": "Question", "name": "What is the first action this week?", "acceptedAnswer": {"@type": "Answer", "text": "Create a one-page checklist and run it in your next supplier status review."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.a26products.com/index.html"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://www.a26products.com/insights/index.html"},{"@type":"ListItem","position":3,"name":"Quality control and AQL: practical release decisions","item":"https://www.a26products.com/insights/quality-control-aql.html"}]}</script>
+<script src="/lux.js"></script>
+</body>
+</html>
