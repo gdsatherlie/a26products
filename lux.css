@@ -23,7 +23,7 @@ body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,s
 .statementBand{background:#eaf0fb}
 .statementBand .container{max-width:1080px}
 .bigStatement{font-family:ui-serif,Georgia,"Times New Roman",serif;font-size:clamp(1.5rem,2.8vw,2rem);line-height:1.24;font-weight:700;color:var(--navy);margin:0 0 var(--space-5);max-width:36ch}
-.statementBand p{font-size:1.08rem;color:#233a63;max-width:74ch}
+.statementBand p:not(.bigStatement){font-size:1.08rem;color:#233a63;max-width:74ch}
 .tightList{margin-top:var(--space-5);padding-left:24px}
 .tightList li{font-size:1.08rem;color:#1f345a;font-weight:600;margin-bottom:var(--space-3)}
 h1,h2,h3,h4{font-family:ui-serif,Georgia,"Times New Roman",serif;color:var(--navy);line-height:1.24;margin:0 0 var(--space-4)}
