@@ -60,4 +60,12 @@ main a.btn,.desktopNav a,.brand,.mobileMenu a,.headerCtas a,.footer a{text-decor
 .footer a{display:block;color:var(--muted);margin-bottom:var(--space-2)}
 .footer a:hover{color:var(--navy);text-decoration:underline}
 .footerBottom{border-top:1px solid var(--border);padding:var(--space-3) 0 var(--space-4);color:var(--muted);font-size:.92rem}
+
+.intakeForm{max-width:760px}
+.intakeForm label{display:block;font-size:1.02rem;font-weight:600;color:var(--ink);margin:var(--space-4) 0 var(--space-2)}
+.intakeForm input,.intakeForm textarea{display:block;width:100%;max-width:100%;padding:12px 14px;border:1px solid #b8c3d8;border-radius:8px;background:#fff;color:var(--ink);font:inherit;line-height:1.4}
+.intakeForm input:focus,.intakeForm textarea:focus{outline:2px solid rgba(30,102,255,.2);border-color:var(--accent)}
+.helper{font-size:1.05rem;color:#2c426b;margin-bottom:var(--space-4)}
+.fieldHelp{font-size:.95rem;color:#435674;margin:var(--space-2) 0 var(--space-4)}
+.submitBtn{min-width:170px}
 @media (max-width:760px){body{padding-top:68px;font-size:16px}.container,.content{padding:0 var(--space-4)}.topbar{min-height:68px}.desktopNav,.headerCtas{display:none}.menuToggle{display:inline-flex}.mobileMenu{top:68px}.section{padding:var(--space-7) 0}.heroGrid,.twoCol,.previewGrid,.vignetteGrid,.tiles,.timeline,.footerGrid{grid-template-columns:1fr}h1{font-size:clamp(2rem,8vw,2.5rem)}}
