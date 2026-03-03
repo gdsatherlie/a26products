@@ -23,6 +23,14 @@
       });
     });
   }
+  var path = window.location.pathname;
+  document.querySelectorAll('.desktopNav a, .mobileMenu a').forEach(function (link) {
+    var route = (link.getAttribute('href') || '').split('#')[0];
+    if ((route === '/about.html' && path === '/about.html') || (route === '/services.html' && path === '/services.html') || (route === '/insights/index.html' && path.indexOf('/insights/') === 0)) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+  document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
 
   document.querySelectorAll('[data-year]').forEach(function (node) {
     node.textContent = String(new Date().getFullYear());
