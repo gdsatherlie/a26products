@@ -227,6 +227,35 @@ a:hover { text-decoration: underline; }
   font-size: .97rem;
 }
 
+.factsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.factItem {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 14px;
+}
+
+.factLabel {
+  margin: 0 0 4px;
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.factValue {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
 .ul,
 .ol {
   margin: 0 0 14px 20px;
@@ -288,6 +317,7 @@ footer {
   .menuToggle { display: inline-flex; }
   .mobileMenu { top: 74px; }
   .steps { grid-template-columns: 1fr; }
+  .factsGrid { grid-template-columns: 1fr; }
   .panel { padding: 18px; }
   .footerRow {
     padding: 10px 0;
