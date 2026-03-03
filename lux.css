@@ -6,7 +6,7 @@ body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,s
 .content{max-width:1040px;margin:0 auto;padding:0 var(--space-5)}
 .siteHeader{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border)}
 .topbar{min-height:74px;display:flex;align-items:center;gap:var(--space-4)}
-.brand{text-decoration:none;color:var(--navy);font-weight:800;letter-spacing:.18em;font-size:.82rem}
+.brand{text-decoration:none;color:var(--navy);font-weight:700;letter-spacing:-.01em;font-size:19px;text-transform:none;white-space:nowrap}
 .desktopNav{margin-left:auto;display:flex;gap:var(--space-4)}
 .desktopNav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
 .desktopNav a:hover,.desktopNav a[aria-current="page"]{color:var(--navy)}
@@ -124,3 +124,5 @@ main a.btn,.desktopNav a,.brand,.mobileMenu a,.headerCtas a,.footer a{text-decor
 @media (max-width:760px){.callout--operate{padding:18px 18px 0}.operateDL .row{grid-template-columns:1fr;gap:5px;padding:10px 0}.operateDL dt{font-size:.67rem}.operateDL dd{max-width:none}.operateCap{margin-left:-18px;margin-right:-18px;padding:10px 18px 12px}.capList{gap:5px}.timeline article{min-height:auto;padding-top:var(--space-5)}.timeline article h3{font-size:1.25rem}
 .nextSteps{padding:var(--space-3)}.nextStepsGrid{grid-template-columns:1fr}.nextStepCard{min-height:auto}.nextStepCard h4{font-size:1.1rem}.ctaRow--nextSteps{margin-bottom:var(--space-5)}.modelBlock{padding:var(--space-4)}.modelItem{grid-template-columns:46px 1fr;grid-template-areas:"num stage" "num desc";row-gap:4px}.modelNum{grid-area:num}.modelStage{grid-area:stage}.modelDesc{grid-area:desc}.modelLinks{padding-top:10px}
 body{padding-top:68px;font-size:16px}.container,.content{padding:0 var(--space-4)}.topbar{min-height:68px}.desktopNav,.headerCtas{display:none}.menuToggle{display:inline-flex}.mobileMenu{top:68px}.section{padding:var(--space-7) 0}.heroGrid,.twoCol,.previewGrid,.vignetteGrid,.tiles,.timeline,.footerGrid{grid-template-columns:1fr}h1{font-size:clamp(2rem,8vw,2.5rem)}}
+
+@media (max-width:768px){.brand{font-size:17px}}
